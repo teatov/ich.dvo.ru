@@ -2,7 +2,7 @@ version: "3"
 
 tasks:
   build:
-    desc: "Развернуть проект с нуля. Выполнять после клонирования репозитория"
+    desc: "Собрать проект с нуля. Выполнять после клонирования репозитория"
     cmds:
       - composer install
       - cp ./.env.example ./.env
@@ -10,6 +10,15 @@ tasks:
         vars: { CLI_ARGS: "build" }
       - php artisan key:generate
       - php artisan storage:link
+
+  deploy:
+    desc: "Выполнить операции, нужные для развёртывания на рабочем окружении"
+    cmds:
+      - task: build
+      - npm run build
+      - php artisan optimize
+      - task: upd
+      - task: migrate
 
   up:
     desc: "Создать и запустить контейнеры"
