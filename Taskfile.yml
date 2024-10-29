@@ -28,13 +28,13 @@ tasks:
       - task: artisan
         vars: { CLI_ARGS: "migrate {{.CLI_ARGS}}" }
 
-  sail:
-    desc: "Алиас для Laravel Sail"
-    cmds:
-      - ./vendor/bin/sail {{.CLI_ARGS}}
-
   artisan:
     desc: "Алиас для Laravel Artisan"
     cmds:
       - task: sail
         vars: { CLI_ARGS: "artisan {{.CLI_ARGS}}" }
+
+  sail:
+    desc: "Алиас для Laravel Sail"
+    cmds:
+      - ./vendor/bin/sail {{.CLI_ARGS}}
