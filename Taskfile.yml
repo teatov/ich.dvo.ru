@@ -9,12 +9,19 @@ tasks:
       - task: sail
         vars: { CLI_ARGS: "build" }
       - php artisan key:generate
+      - php artisan storage:link
 
   up:
     desc: "Создать и запустить контейнеры"
     cmds:
       - task: sail
         vars: { CLI_ARGS: "up {{.CLI_ARGS}}" }
+
+  upd:
+    desc: "Создать и запустить контейнеры на фоне"
+    cmds:
+      - task: sail
+        vars: { CLI_ARGS: "up -d {{.CLI_ARGS}}" }
 
   down:
     desc: "Остановить и удалить контейнеры"
@@ -39,6 +46,12 @@ tasks:
     cmds:
       - task: artisan
         vars: { CLI_ARGS: "migrate {{.CLI_ARGS}}" }
+
+  seed:
+    desc: "Наполнить базу тестовыми данными"
+    cmds:
+      - task: artisan
+        vars: { CLI_ARGS: "db:seed {{.CLI_ARGS}}" }
 
   artisan:
     desc: "Алиас для Laravel Artisan"

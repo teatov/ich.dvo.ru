@@ -20,13 +20,17 @@ task build
 ```
 6. Запустить контейнеры на фоне:
 ```bash
-task up -- -d
+task upd
 ```
 7. Выполнить миграции базы данных:
 ```bash
 task migrate
 ```
-8. Добавить в [hosts](https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system) строчку:
+8. Опционально наполнить базу данных пробными данными:
+```bash
+task seed
+```
+9. Добавить в [hosts](https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system) строчку:
 ```
 127.0.0.1 ich.dvo.local
 ```
