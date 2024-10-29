@@ -16,6 +16,18 @@ tasks:
       - task: sail
         vars: { CLI_ARGS: "up {{.CLI_ARGS}}" }
 
+  down:
+    desc: "Остановить и удалить контейнеры"
+    cmds:
+      - task: sail
+        vars: { CLI_ARGS: "down {{.CLI_ARGS}}" }
+
+  start:
+    desc: "Запустить контейнеры"
+    cmds:
+      - task: sail
+        vars: { CLI_ARGS: "start {{.CLI_ARGS}}" }
+
   stop:
     desc: "Остановить контейнеры"
     cmds:

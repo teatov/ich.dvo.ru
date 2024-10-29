@@ -53,8 +53,12 @@ task stop
 
 Для часто используемых команд есть алиасы:
 - `task up` - запускает `sail up`
+- `task down` - запускает `sail down`
+- `task start` - запускает `sail start`
 - `task stop` - запускает `sail stop`
 - `task artisan` - запускает `sail artisan`
 - `task migrate` - запускает `sail artisan migrate`
+
+Описание команд Task можно увидеть через команду `task`, без аргументов. Описание команд Sail - через `task sail`, без аргументов.
 
 Для единообразия лучше всегда запускать всяческие команды именно через Task.
