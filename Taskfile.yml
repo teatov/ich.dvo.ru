@@ -1,0 +1,40 @@
+version: "3"
+
+tasks:
+  build:
+    desc: "Развернуть проект с нуля. Выполнять после клонирования репозитория"
+    cmds:
+      - composer install
+      - cp ./.env.example ./.env
+      - task: sail
+        vars: { CLI_ARGS: "build" }
+      - php artisan key:generate
+
+  up:
+    desc: "Создать и запустить контейнеры"
+    cmds:
+      - task: sail
+        vars: { CLI_ARGS: "up {{.CLI_ARGS}}" }
+
+  stop:
+    desc: "Остановить контейнеры"
+    cmds:
+      - task: sail
+        vars: { CLI_ARGS: "stop {{.CLI_ARGS}}" }
+
+  migrate:
+    desc: "Выполнить миграции базы данных"
+    cmds:
+      - task: artisan
+        vars: { CLI_ARGS: "migrate {{.CLI_ARGS}}" }
+
+  sail:
+    desc: "Алиас для Laravel Sail"
+    cmds:
+      - ./vendor/bin/sail {{.CLI_ARGS}}
+
+  artisan:
+    desc: "Алиас для Laravel Artisan"
+    cmds:
+      - task: sail
+        vars: { CLI_ARGS: "artisan {{.CLI_ARGS}}" }
