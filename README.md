@@ -1,8 +1,10 @@
 Новый веб-сайт для [Института химии ДВО РАН](http://www.ich.dvo.ru/).
 
+- Docker
 - Бэкенд: PHP, Laravel
-- Фронтенд: TailwindCSS
+- Фронтенд: Laravel Blade, TailwindCSS
 - База данных: MariaDB
+- Сервер: Nginx
 
 ## Необходимое для разработки
 1. Установить последнюю версию [PHP](https://www.php.net/downloads.php), [Composer](https://getcomposer.org/download/), и [Node с NPM](https://nodejs.org/en/download). PHP и Composer можно установить командой [отсюда](https://laravel.com/docs/11.x/installation#installing-php).
