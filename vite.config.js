@@ -15,7 +15,7 @@ export default defineConfig({
         host: true,
         port: 5173,
         hmr: {
-            host: process.env.VITE_SERVER_URL,
+            host: process.env.APP_HOST,
         },
     },
 });

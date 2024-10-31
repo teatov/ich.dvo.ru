@@ -69,7 +69,7 @@ tasks:
     desc: "Запустить Vite Developer Server"
     cmds:
       - task: bun
-        vars: { CLI_ARGS: "run dev --host {{.CLI_ARGS}}" }
+        vars: { CLI_ARGS: "run dev {{.CLI_ARGS}}" }
 
   artisan:
     desc: "Запуск команд Laravel Artisan из контейнера"
