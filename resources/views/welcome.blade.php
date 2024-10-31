@@ -14,10 +14,11 @@
 </head>
 
 <body class="font-sans antialiased">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla deserunt quia placeat a natus, sunt
+    <h1>Hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla deserunt quia placeat a natus, sunt
     adipisci molestiae, dolores aut culpa quo error possimus officia eius quos est odit architecto repellendus itaque
     quibusdam. Esse, incidunt ad unde commodi consequuntur maiores quae fugiat, illum dolorem repudiandae temporibus
-    distinctio non corporis fuga?
+    distinctio non corporis fuga?</p>
 </body>
 
 </html>
