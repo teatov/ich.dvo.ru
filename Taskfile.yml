@@ -1,5 +1,7 @@
 version: "3"
 
+dotenv: ['.env']
+
 tasks:
   build:
     desc: "Собрать проект с нуля. Выполнять после клонирования репозитория"
@@ -98,3 +100,8 @@ tasks:
     desc: "Одноразовый запуск контейнера 'bun' для выполнения команд Bun"
     cmds:
       - docker compose run --rm --service-ports bun bun {{.CLI_ARGS}}
+
+  db-shell:
+    desc: "Запустить оболочку MariaDB"
+    cmds:
+      - docker compose exec mariadb mariadb -u $DB_USERNAME -p {{.CLI_ARGS}}
