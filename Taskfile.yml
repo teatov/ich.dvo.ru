@@ -11,6 +11,8 @@ tasks:
         vars: { CLI_ARGS: "git config --global --add safe.directory /var/www" }
       - task: composer
         vars: { CLI_ARGS: "install" }
+      - task: bun
+        vars: { CLI_ARGS: "install" }
       - task: artisan
         vars: { CLI_ARGS: "storage:link" }
       - task: artisan
@@ -21,6 +23,8 @@ tasks:
     desc: "Выполнить операции, нужные для развёртывания на рабочем окружении"
     cmds:
       - task: build
+      - task: bun
+        vars: { CLI_ARGS: "run build" }
       - task: artisan
         vars: { CLI_ARGS: "optimize" }
 
@@ -61,6 +65,12 @@ tasks:
       - task: artisan
         vars: { CLI_ARGS: "db:seed {{.CLI_ARGS}}" }
 
+  vite:
+    desc: "Запустить Vite Developer Server"
+    cmds:
+      - task: bun
+        vars: { CLI_ARGS: "run dev --host {{.CLI_ARGS}}" }
+
   artisan:
     desc: "Запуск команд Laravel Artisan из контейнера"
     cmds:
@@ -83,3 +93,8 @@ tasks:
     desc: "Запуск команд контейнера 'php-fpm'"
     cmds:
       - docker compose exec php-fpm {{.CLI_ARGS}}
+
+  bun:
+    desc: "Одноразовый запуск контейнера 'bun' для выполнения команд Bun"
+    cmds:
+      - docker compose run --rm --service-ports bun bun {{.CLI_ARGS}}

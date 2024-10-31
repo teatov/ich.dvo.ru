@@ -52,6 +52,19 @@ services:
         depends_on:
             - php-fpm
 
+    bun:
+        image: oven/bun:1.1
+        container_name: ich-dvo-ru-bun
+        working_dir: /var/www/
+        profiles:
+            - donotstart
+        ports:
+            - 5173:5173
+        volumes:
+            - ./:/var/www
+        networks:
+            - ich-dvo-ru
+
 networks:
     ich-dvo-ru:
         driver: bridge
