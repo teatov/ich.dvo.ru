@@ -7,30 +7,21 @@
 - Сервер: Nginx
 
 ## Необходимое для разработки
-1. Установить последнюю версию [PHP](https://www.php.net/downloads.php), [Composer](https://getcomposer.org/download/), и [Node с NPM](https://nodejs.org/en/download). PHP и Composer можно установить командой [отсюда](https://laravel.com/docs/11.x/installation#installing-php).
-2. Установить [Docker Engine](https://docs.docker.com/engine/install/) (или [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) для Windows) и настроить [прокси для него](https://help.reg.ru/support/servery-vps/oblachnyye-servery/rabota-s-serverom/kak-podklyuchitsya-k-lokalnomu-proksi-serveru-docker-io#0).
-3. Установить [Task](https://taskfile.dev/installation/#get-the-binary).
-4. Склонировать себе репозиторий:
+1. Установить [Docker Engine](https://docs.docker.com/engine/install/) (или [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) для Windows) и настроить [прокси для него](https://gist.github.com/beeyev/143ec1ae9eb21e7c3b6d55f1bbaf5ce2).
+2. Установить [Task](https://taskfile.dev/installation/#get-the-binary).
+3. Склонировать себе репозиторий:
 ``` bash
 git clone https://github.com/teatov/ich.dvo.ru.git
 ```
-5. Собрать проект - установить зависимости, создать `.env` и собрать контейнеры:
+4. Собрать проект - создастся `.env`, соберутся контейнеры, установятся зависимости, выполнятся миграции:
 ```bash
 task build
 ```
-6. Запустить контейнеры на фоне:
-```bash
-task upd
-```
-7. Выполнить миграции базы данных:
-```bash
-task migrate
-```
-8. Опционально наполнить базу данных пробными данными:
+5. Опционально наполнить базу данных пробными данными:
 ```bash
 task seed
 ```
-9. Добавить в [hosts](https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system) строчку:
+6. Добавить в [hosts](https://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system) строчку:
 ```
 127.0.0.1 ich.dvo.local
 ```
@@ -49,27 +40,15 @@ task stop
 ```
 
 ### Запуск различных команд
-В качестве универсальной запускалки используется [Task](https://taskfile.dev/).
+Так как всё работает на Docker, команды по типу `php artisan`, `composer` должны выполняться изнутри контейнеров. Если их запускать локально из своей консоли, толку не будет и возможно даже что-то сломается.
 
-Так как всё работает на Docker, команды по типу `php artisan` или `composer` должны выполняться изнутри контейнеров. Если их запускать просто из своей консоли, толку не будет и возможно даже что-то сломается.
+В качестве универсальной запускалки используется [Task](https://taskfile.dev/). Его команды выполняют соответствующие команды внутри контейнеров, например `task artisan` запускает `php artisan` внутри контейнера.
 
-Для взаимодействия со всем что связано с Docker используется [Laravel Sail](https://laravel.com/docs/11.x/sail). Его команды выполняют соответствующие команды внутри контейнеров, например `./vendor/bin/sail artisan` запускает `php artisan` внутри контейнера.
+Чтобы передать туда какие-нибудь аргументы, отделите их от команды через `--`, например `task artisan -- optimize` под капотом запустит `php artisan optimize`.
 
-Для выполнения его команд пользуйтесь `task sail`, чтобы не писать каждый раз `./vendor/bin/sail`.
+Для единообразия лучше всегда запускать всяческие команды именно через Task. Если в какой-нибудь статье просят, например, установить новую зависимость для Composer через `composer install laravel/pint`, то вместо этого пишите `task composer -- install laravel/pint`.
 
-Чтобы передать туда какие-нибудь аргументы, отделите их от команды через `--`, например `task sail -- shell` под капотом запустит `./vendor/bin/sail shell`.
-
-Для часто используемых команд есть алиасы:
-- `task up` - запускает `sail up`
-- `task down` - запускает `sail down`
-- `task start` - запускает `sail start`
-- `task stop` - запускает `sail stop`
-- `task artisan` - запускает `sail artisan`
-- `task migrate` - запускает `sail artisan migrate`
-
-Описание команд Task можно увидеть через команду `task`, без аргументов. Описание команд Sail - через `task sail`, без аргументов.
-
-Для единообразия лучше всегда запускать всяческие команды именно через Task.
+Список и описания команд Task можно посмотреть через `task --list`.
 
 ### Обновление фронтенда в прямом эфире
 Очень удобно когда страница в браузере обновляется автоматически сразу после изменения кода. Для этого есть Vite с его разработчиковским сервером. Однако у него нет возможности запускаться на фоне, так что ему обязательно нужно занимать свободный терминал.
@@ -82,10 +61,11 @@ npm run dev
 ```
 
 ## Развёртывание на рабочем окружении 
-1. Убедиться что PHP, Composer, Nodejs и Docker установлены.
-2. Запустить сборку:
+1. Пробросить нужные переменные окружения.
+2. Убедиться что Docker установлен.
+3. Запустить развёртывание:
 ```bash
 task deploy
 ```
-3. ???
-4. PROFIT!
+4. ???
+5. PROFIT!

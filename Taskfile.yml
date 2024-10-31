@@ -4,51 +4,50 @@ tasks:
   build:
     desc: "Собрать проект с нуля. Выполнять после клонирования репозитория"
     cmds:
-      - composer install
-      - cp ./.env.example ./.env
-      - task: sail
-        vars: { CLI_ARGS: "build" }
-      - php artisan key:generate
-      - php artisan storage:link
+      - '{{if eq OS "windows"}}powershell{{end}} cp ./.env.example ./.env'
+      - docker compose build
+      - task: up-d
+      - task: exec
+        vars: { CLI_ARGS: "git config --global --add safe.directory /var/www" }
+      - task: composer
+        vars: { CLI_ARGS: "install" }
+      - task: artisan
+        vars: { CLI_ARGS: "storage:link" }
+      - task: artisan
+        vars: { CLI_ARGS: "key:generate" }
+      - task: migrate
 
   deploy:
     desc: "Выполнить операции, нужные для развёртывания на рабочем окружении"
     cmds:
       - task: build
-      - npm run build
-      - php artisan optimize
-      - task: upd
-      - task: migrate
+      - task: artisan
+        vars: { CLI_ARGS: "optimize" }
 
   up:
     desc: "Создать и запустить контейнеры"
     cmds:
-      - task: sail
-        vars: { CLI_ARGS: "up {{.CLI_ARGS}}" }
+      - docker compose up {{.CLI_ARGS}}
 
-  upd:
+  up-d:
     desc: "Создать и запустить контейнеры на фоне"
     cmds:
-      - task: sail
-        vars: { CLI_ARGS: "up -d {{.CLI_ARGS}}" }
+      - docker compose up -d {{.CLI_ARGS}}
 
   down:
     desc: "Остановить и удалить контейнеры"
     cmds:
-      - task: sail
-        vars: { CLI_ARGS: "down {{.CLI_ARGS}}" }
+      - docker compose down {{.CLI_ARGS}}
 
   start:
     desc: "Запустить контейнеры"
     cmds:
-      - task: sail
-        vars: { CLI_ARGS: "start {{.CLI_ARGS}}" }
+      - docker compose start {{.CLI_ARGS}}
 
   stop:
     desc: "Остановить контейнеры"
     cmds:
-      - task: sail
-        vars: { CLI_ARGS: "stop {{.CLI_ARGS}}" }
+      - docker compose stop {{.CLI_ARGS}}
 
   migrate:
     desc: "Выполнить миграции базы данных"
@@ -63,12 +62,24 @@ tasks:
         vars: { CLI_ARGS: "db:seed {{.CLI_ARGS}}" }
 
   artisan:
-    desc: "Алиас для Laravel Artisan"
+    desc: "Запуск команд Laravel Artisan из контейнера"
     cmds:
-      - task: sail
+      - task: php
         vars: { CLI_ARGS: "artisan {{.CLI_ARGS}}" }
 
-  sail:
-    desc: "Алиас для Laravel Sail"
+  php:
+    desc: "Запуск команд PHP из контейнера"
     cmds:
-      - ./vendor/bin/sail {{.CLI_ARGS}}
+      - task: exec
+        vars: { CLI_ARGS: "php {{.CLI_ARGS}}" }
+
+  composer:
+    desc: "Запуск команд Composer из контейнера"
+    cmds:
+      - task: exec
+        vars: { CLI_ARGS: "composer {{.CLI_ARGS}}" }
+
+  exec:
+    desc: "Запуск команд контейнера 'php-fpm'"
+    cmds:
+      - docker compose exec php-fpm {{.CLI_ARGS}}
