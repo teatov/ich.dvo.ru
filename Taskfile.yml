@@ -22,7 +22,7 @@ tasks:
       - task: migrate
 
   deploy:
-    desc: "Выполнить операции, нужные для развёртывания на рабочем окружении"
+    desc: "Выполнить операции, нужные для сборки и развёртывания на рабочем окружении"
     cmds:
       - task: build
       - task: bun
@@ -68,7 +68,7 @@ tasks:
         vars: { CLI_ARGS: "db:seed {{.CLI_ARGS}}" }
 
   vite:
-    desc: "Запустить Vite Developer Server"
+    desc: "Запустить сервер Vite"
     cmds:
       - task: bun
         vars: { CLI_ARGS: "run dev {{.CLI_ARGS}}" }
