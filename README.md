@@ -6,6 +6,7 @@
 - База данных: MariaDB
 - Сервер: Nginx
 - Рантайм для JS: Bun
+- Обратный прокси: Traefik
 
 ## Необходимое для разработки
 1. Установить [Docker Engine](https://docs.docker.com/engine/install/)
