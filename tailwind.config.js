@@ -11,15 +11,19 @@ export default {
     ],
     theme: {
         colors: {
-            transparent: 'transparent',
-            current: 'currentColor',
-            'white': '#ffffff',
-            'black': '#000000',
-            'light-gray': '#d9d9d9',
-            'dark-gray': '#686868',
-            'dark-gray': '#686868',
-            'blue': '#40adff',
-          },
+            transparent: "transparent",
+            current: "currentColor",
+            background: "#ffffff",
+            foreground: "#000000",
+            "light-gray": "#d9d9d9",
+            "dark-gray": "#686868",
+            "dark-gray": "#686868",
+            blue: {
+                lighter: "#53B5FF",
+                DEFAULT: "#40adff",
+                darker: "#3A9CE6",
+            },
+        },
         extend: {
             fontFamily: {
                 sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
