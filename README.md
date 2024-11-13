@@ -2,7 +2,7 @@
 
 - Docker
 - Бэкенд: PHP, Laravel
-- Фронтенд: Laravel Blade, TailwindCSS
+- Фронтенд: Laravel Blade, Alpine.js, TailwindCSS
 - База данных: MariaDB
 - Сервер: Nginx
 - Рантайм для JS: Bun
