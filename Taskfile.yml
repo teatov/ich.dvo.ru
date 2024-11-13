@@ -70,8 +70,7 @@ tasks:
   vite:
     desc: "Запустить сервер Vite"
     cmds:
-      - task: bun
-        vars: { CLI_ARGS: "run dev {{.CLI_ARGS}}" }
+      - docker compose run --rm --service-ports bun bun run dev
 
   artisan:
     desc: "Запуск команд Laravel Artisan из контейнера"
@@ -99,7 +98,7 @@ tasks:
   bun:
     desc: "Одноразовый запуск контейнера 'bun' для выполнения команд Bun"
     cmds:
-      - docker compose run --rm --service-ports bun bun {{.CLI_ARGS}}
+      - docker compose run --rm bun bun {{.CLI_ARGS}}
 
   db-shell:
     desc: "Запустить оболочку MariaDB"
