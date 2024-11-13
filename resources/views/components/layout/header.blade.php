@@ -1,7 +1,9 @@
-<header class="max-w-screen-1.5xl container mx-auto px-4 md:px-15">
+<header class="max-w-screen-1.5xl container sticky left-0 right-0 top-0 mx-auto bg-background px-4 lg:px-15"
+    x-data="{ headerOpen: false }">
     <div class="flex items-center justify-between border-b py-3">
         <x-ui.link href="/" class="block font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-ui.link>
-        <nav>
+
+        <nav class="hidden xl:block">
             <ul class="flex gap-x-4">
                 @foreach ($navLinks as $label => $navLink)
                     @if (is_array($navLink) && !array_is_list($navLink))
@@ -31,6 +33,46 @@
                 @endforeach
             </ul>
         </nav>
-        <x-ui.button href="/">Связаться с нами</x-ui.button>
+        <x-ui.button href="/" class="hidden xl:block">Связаться с нами</x-ui.button>
+
+        <div class="flex items-center xl:hidden">
+            <button @click="headerOpen = ! headerOpen" class="flex items-center justify-center p-3">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path :class="{ 'hidden': headerOpen, 'inline-flex': !headerOpen }" class="inline-flex"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path :class="{ 'hidden': !headerOpen, 'inline-flex': headerOpen }" class="hidden"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
     </div>
+
+    <nav x-show="headerOpen" class="grid xl:hidden" style="display: none;"
+        x-transition:enter="transition-[grid-template-rows] ease-out duration-200"
+        x-transition:enter-start="grid-rows-[0fr]" x-transition:enter-end="grid-rows-[1fr]"
+        x-transition:leave="transition-[grid-template-rows] ease-in duration-75"
+        x-transition:leave-start="grid-rows-[1fr]" x-transition:leave-end="grid-rows-[0fr]">
+        <ul class="space-y-4 overflow-hidden border-b py-4">
+            @foreach ($navLinks as $label => $navLink)
+                @if (is_array($navLink))
+                    <x-ui.collapsible>
+                        <x-slot:trigger>{{ $label }}</x-slot:trigger>
+                        <x-slot:content class="space-y-4 pl-4 pt-4">
+                            @if (array_is_list($navLink))
+                                @foreach ($navLink[0] as $subLabel => $subNavLink)
+                                    <li><x-ui.link href="{{ $subNavLink }}">{{ $subLabel }}</x-ui.link></li>
+                                @endforeach
+                            @else
+                                @foreach ($navLink as $subLabel => $subNavLink)
+                                    <li><x-ui.link href="{{ $subNavLink }}">{{ $subLabel }}</x-ui.link></li>
+                                @endforeach
+                            @endif
+                        </x-slot:content>
+                    </x-ui.collapsible>
+                @else
+                    <li><x-ui.link href="{{ $navLink }}">{{ $label }}</x-ui.link></li>
+                @endif
+            @endforeach
+        </ul>
+    </nav>
 </header>
