@@ -1,6 +1,6 @@
 <footer class="bg-foreground text-neutral-darker">
     <div
-        class="max-w-screen-1.5xl container mx-auto flex flex-col justify-between gap-y-6 px-4 py-14 md:flex-row md:px-15">
+        class="max-w-screen-1.5xl container mx-auto flex flex-col justify-between gap-y-6 px-4 py-14 md:flex-row lg:px-15">
         <nav class="space-y-9 md:min-w-[50%]">
             @foreach ($navLinks as $sectionLabel => $sectionColumns)
                 <div>
