@@ -14,6 +14,10 @@ export default {
             fontFamily: {
                 sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
             },
+            spacing: {
+                15: "3.75rem",
+                "screen-1.5xl": "1400px",
+            },
         },
     },
     plugins: [],
