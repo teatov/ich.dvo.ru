@@ -11,9 +11,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased min-h-screen flex flex-col">
+<body class="flex min-h-screen flex-col gap-y-10 font-sans antialiased">
     <x-layout.header />
-    <main class="max-w-screen-1.5xl container mx-auto px-15 grow">
+    <main class="max-w-screen-1.5xl container mx-auto grow px-15">
         {{ $slot }}
     </main>
     <x-layout.footer />
