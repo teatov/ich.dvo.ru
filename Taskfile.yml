@@ -6,7 +6,7 @@ tasks:
   build:
     desc: "Собрать проект с нуля. Выполнять после клонирования репозитория"
     cmds:
-      - '{{if eq OS "windows"}}powershell{{end}} cp ./.env.example ./.env'
+      - 'test -f .env || {{if eq OS "windows"}}powershell{{end}} cp ./.env.example ./.env'
       - docker compose build
       - task: up-d
       - task: exec
