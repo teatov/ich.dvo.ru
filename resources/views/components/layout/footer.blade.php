@@ -1,4 +1,4 @@
-<footer class="bg-foreground text-dark-gray">
+<footer class="bg-foreground text-neutral-darker">
     <div class="max-w-screen-1.5xl container mx-auto px-15 py-14">
         <nav>
             <ul class="flex gap-x-4">

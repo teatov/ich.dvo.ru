@@ -15,13 +15,14 @@ export default {
             current: "currentColor",
             background: "#ffffff",
             foreground: "#000000",
-            "light-gray": "#d9d9d9",
-            "dark-gray": "#686868",
-            "dark-gray": "#686868",
-            blue: {
+            primary: {
                 lighter: "#53B5FF",
                 DEFAULT: "#40adff",
                 darker: "#3A9CE6",
+            },
+            neutral: {
+                DEFAULT: "#d9d9d9",
+                darker: "#686868",
             },
         },
         extend: {

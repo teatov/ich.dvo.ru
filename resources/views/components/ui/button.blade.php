@@ -1,5 +1,6 @@
 @php
-    $classes = 'bg-blue text-background py-3 px-5 rounded hover:bg-blue-lighter active:bg-blue-darker';
+    $classes =
+        'bg-primary text-nowrap text-background py-3 px-5 rounded hover:bg-primary-lighter active:bg-primary-darker inline-block';
 @endphp
 
 @if ($attributes->has('href'))

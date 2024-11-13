@@ -4,10 +4,10 @@
 
 @layer base {
     body {
-      @apply bg-background text-foreground;
+        @apply bg-background text-foreground;
     }
 
-    a {
-      @apply ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2;
+    * {
+        @apply border-neutral ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
     }
-  }
+}
