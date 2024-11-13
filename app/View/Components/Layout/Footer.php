@@ -9,33 +9,38 @@ use Illuminate\View\Component;
 
 class Footer extends Component
 {
-    public array $navLinks = [
-        'О нас' => [
-            [
-                'Об институте' => '/about',
-                'История' => '/history',
-                'Сотрудники' => '/staff',
+    public array $navLinks;
+
+    public function __construct()
+    {
+        $this->navLinks = [
+            'О нас' => [
+                [
+                    'Об институте' => route('about'),
+                    'История' => route('history'),
+                    'Сотрудники' => route('staff'),
+                ],
+                [
+                    'Новости' => route('news'),
+                    'Мероприятия' => route('events'),
+                    'Достижения' => route('achievements'),
+                ],
             ],
-            [
-                'Новости' => '/news',
-                'Мероприятия' => '/events',
-                'Достижения' => '/achievements',
+            'Организации' => [
+                [
+                    'Организация 1' => '/1',
+                    'Организация 2' => '/2',
+                    'Организация 3' => '/3',
+                    'Организация 4' => '/4',
+                ],
+                [
+                    'Диссертационный совет' => route('dissertations'),
+                    'Список патентов' => route('patents'),
+                    'Оборудование' => route('equipment'),
+                ],
             ],
-        ],
-        'Организации' => [
-            [
-                'Организация 1' => '/1',
-                'Организация 2' => '/2',
-                'Организация 3' => '/3',
-                'Организация 4' => '/4',
-            ],
-            [
-                'Диссертационный пакет' => '/dissertations',
-                'Список патентов' => '/patents',
-                'Оборудование' => '/equipment',
-            ],
-        ],
-    ];
+        ];
+    }
 
     public function render(): View
     {

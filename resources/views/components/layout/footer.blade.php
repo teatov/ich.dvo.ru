@@ -1,6 +1,6 @@
 <footer class="bg-foreground text-neutral-darker">
     <div
-        class="max-w-screen-1.5xl container mx-auto flex flex-col justify-between gap-y-6 px-4 py-14 md:flex-row lg:px-15">
+        class="max-w-screen-1.5xl container mx-auto flex flex-col justify-between gap-y-9 px-4 py-14 md:flex-row lg:px-15">
         <nav class="space-y-9 md:min-w-[50%]">
             @foreach ($navLinks as $sectionLabel => $sectionColumns)
                 <div>
@@ -20,7 +20,7 @@
         </nav>
         <div class="flex flex-col items-start justify-between space-y-4 md:items-end">
             <x-ui.button href="/">Связаться с нами</x-ui.button>
-            <x-ui.link href="/privacy">Политика конфиденциальности</x-ui.link>
+            <x-ui.link href="{{ route('privacy') }}">Политика конфиденциальности</x-ui.link>
         </div>
     </div>
 </footer>
