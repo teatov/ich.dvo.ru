@@ -1,16 +1,28 @@
-<header class="max-w-screen-1.5xl container mx-auto px-15">
+<header class="max-w-screen-1.5xl container mx-auto px-4 md:px-15">
     <div class="flex items-center justify-between border-b py-3">
         <x-ui.link href="/" class="block font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-ui.link>
         <nav>
             <ul class="flex gap-x-4">
                 @foreach ($navLinks as $label => $navLink)
-                    @if (is_array($navLink))
+                    @if (is_array($navLink) && !array_is_list($navLink))
                         <x-ui.dropdown wrapperClasses="mt-6" contentClasses="flex flex-col divide-y">
                             <x-slot name="trigger">{{ $label }}</x-slot>
                             <x-slot name="content">
                                 @foreach ($navLink as $subLabel => $subNavLink)
                                     <li><x-ui.link href="{{ $subNavLink }}"
-                                            class="block px-5 py-3">{{ $subLabel }}</x-ui.link></li>
+                                            class="block mx-5 my-3">{{ $subLabel }}</x-ui.link></li>
+                                @endforeach
+                            </x-slot>
+                        </x-ui.dropdown>
+                    @elseif (is_array($navLink) && array_is_list($navLink))
+                        <x-ui.dropdown
+                            wrapperClasses="mt-6 left-0 right-0 max-w-screen-1.5xl container mx-auto px-4 md:px-15"
+                            contentClasses="columns-4 space-y-6 px-24 py-16">
+                            <x-slot name="trigger">{{ $label }}</x-slot>
+                            <x-slot name="content">
+                                @foreach ($navLink[0] as $subLabel => $subNavLink)
+                                    <li class="text-center"><x-ui.link
+                                            href="{{ $subNavLink }}">{{ $subLabel }}</x-ui.link></li>
                                 @endforeach
                             </x-slot>
                         </x-ui.dropdown>
