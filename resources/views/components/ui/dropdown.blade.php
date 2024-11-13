@@ -1,6 +1,6 @@
 @props(['wrapperClasses' => '', 'contentClasses' => ''])
 
-<div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
+<div x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
     <button class="flex items-center gap-x-1.5 hover:text-primary active:text-primary-darker" @click="open = ! open">
         {{ $trigger }}
         <svg width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +13,7 @@
         x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
         @click="open = false">
-        <div class="text-nowrap {{ $contentClasses }} border">
+        <div class="text-nowrap {{ $contentClasses }} border text-sm">
             {{ $content }}
         </div>
     </div>
