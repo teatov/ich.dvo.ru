@@ -21,6 +21,7 @@ export default {
                 darker: "#3A9CE6",
             },
             neutral: {
+                lighter: "#F5F5F5",
                 DEFAULT: "#d9d9d9",
                 darker: "#686868",
             },
