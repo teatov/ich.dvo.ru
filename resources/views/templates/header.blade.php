@@ -2,7 +2,7 @@
     <div class="container max-w-1280px mx-auto">
         <div style="column-gap: 124px" class="header-wrapper flex h-70 items-center">
             <div class="header-nav-title max-w-153px uppercase font-bold leading-17px tracking-7p">
-                <a href="{{ route('home') }}" class="nav-title-link text-sm">институт химии дво ран</a>
+                <a href="/" class="nav-title-link text-sm">институт химии дво ран</a>
             </div>
             <nav class="header-nav flex items-center">
                 <ul class="header-nav-list flex gap-x-4 mr-96">
