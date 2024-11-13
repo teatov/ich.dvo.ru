@@ -1,3 +1,4 @@
+import '@fontsource-variable/inter';
 import axios from 'axios';
 window.axios = axios;
 
