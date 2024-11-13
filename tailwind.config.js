@@ -10,6 +10,16 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            'white': '#ffffff',
+            'black': '#000000',
+            'light-gray': '#d9d9d9',
+            'dark-gray': '#686868',
+            'dark-gray': '#686868',
+            'blue': '#40adff',
+          },
         extend: {
             fontFamily: {
                 sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
