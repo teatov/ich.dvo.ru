@@ -12,8 +12,32 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Figshest', ...defaultTheme.fontFamily.sans],
             },
+            maxWidth: {
+                '153px': '153px', // добавляем кастомный maxWidth
+              },
+            lineHeight: {
+                '17px': '17px',
+              },
+            letterSpacing: {
+                '7p': '0.07em', // 7% от ширины шрифта (примерный эквивалент)
+              },
+              width: {
+                '165': '165px',
+              },
+              colors: {
+                'btn-color': '#40ADFF',
+              },
+              height: {
+                '70': '70px',
+              },
+              margin: {
+                '89px': '89px',
+              },
+              margin:{
+                '96': '96px'
+              },
         },
     },
     plugins: [],
