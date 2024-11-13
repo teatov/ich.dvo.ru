@@ -19,3 +19,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.zed
+
+*.fuse_hidden*
