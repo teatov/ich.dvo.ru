@@ -11,10 +11,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased">
-    <main class="max-w-screen-1.5xl container mx-auto px-15">
+<body class="font-sans antialiased min-h-screen flex flex-col">
+    <x-layout.header />
+    <main class="max-w-screen-1.5xl container mx-auto px-15 grow">
         {{ $slot }}
     </main>
+    <x-layout.footer />
 </body>
 
 </html>
