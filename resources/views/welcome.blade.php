@@ -89,4 +89,114 @@
             <x-ui.button>Все тематики</x-ui.button>
         </div>
     </section>
+    <section class="pt-16 pb-20">
+        <div class="pb-10 flex justify-start">
+            <x-ui.h1>
+                Направления работы института
+            </x-ui.h1>
+        </div>
+        <div class="pb-10">
+            <ul class="flex justify-between flex-wrap gap-y-10 pb-10">
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+                <li class="max-w-72">
+                    <img src="" alt="" class="">
+                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="" class="">Подробнее</a>
+                </li>
+            </ul>
+            <x-ui.showmore>Показать еще</x-ui.showmore>
+        </div>
+    </section>
+    <section class="bg-neutral-lighter pt-20 pl-20 pb-75px flex justify-between mb-20">
+        <div class="w-434px">
+            <h3 class="font-semibold text-3xl pb-5">В институте можно оставить заявку на аренду оборудования</h3>
+            <p class="pb-7 text-neutral-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="text-primary-detailed font-semibold text-xs">Подробнее</button>
+        </div>
+        <div class="bg-neutral-form w-650px h-72 mr-14 align-items-center rounded-lg text-center content-center">
+            <div class="">Image</div>
+        </div>
+    </section>
+    <section class="mb-16">
+        <x-ui.minibreadcrumb>Новости</x-ui.minibreadcrumb>
+        <h2 class="font-bold text-5xl">Наши новости</h2>
+        <div class="mt-8">
+            <ul class="flex justify-between">
+                <li class="w-96 px-5 pt-5 border-solid border-2 border-neutral rounded-lg pb-10">
+                    <a href="" class="">
+                        <img src="" alt="image" class="mb-5">
+                    </a>
+                    <x-ui.minibreadcrumb>Категория</x-ui.minibreadcrumb>
+                    <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                    <p class="pt-6 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="" class="">Подробнее</a>
+                    
+                </li>
+                <li class="w-96 px-5 pt-5 border-solid border-2 border-neutral rounded-lg pb-10">
+                    <a href="" class="">
+                        <img src="" alt="image" class="mb-5">
+                        <x-ui.minibreadcrumb>Категория</x-ui.minibreadcrumb>
+                        <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                        <p class="pt-6 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="" class="pt-6">Подробнее</a>
+                    </a>
+                </li>
+                <li class="w-96 px-5 pt-5 border-solid border-2 border-neutral rounded-lg pb-10">
+                    <a href="" class="">
+                        <img src="" alt="image" class="mb-5">
+                        <x-ui.minibreadcrumb>Категория</x-ui.minibreadcrumb>
+                        <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+                        <p class="pt-6 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="" class="mt-6">Подробнее</a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class='bg-neutral-lighter text-center content-center py-52 mb-6'>
+        <span>Форма обратной связи</span>
+    </section>
 </x-app-layout>
+
