@@ -7,5 +7,5 @@
 
     <x-ui.h1>Об институте</x-ui.h1>
 
-    <x-ui.p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</x-ui.p>
+    <x-ui.lead>Lorem ipsum dolor sit amet, consectetur adipiscing elit</x-ui.lead>
 </x-app-layout>
