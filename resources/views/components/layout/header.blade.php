@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <nav x-show="headerOpen" x-collapse style="display: none;">
+        <nav class="xl:hidden" x-show="headerOpen" x-collapse style="display: none;">
             <ul class="space-y-4 overflow-hidden border-b py-4">
                 @foreach ($navLinks as $label => $navLink)
                     @if (is_array($navLink))
