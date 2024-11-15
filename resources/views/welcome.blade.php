@@ -87,7 +87,7 @@
             <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
             <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</x-p>
-            <x-link href="{{ route('equipment') }}">Оборудование</x-link>
+            <x-link href="{{ route('equipment') }}">Подробнее</x-link>
         </div>
         <div class="h-72 w-1/2">
             <x-img class="rounded-xl"
