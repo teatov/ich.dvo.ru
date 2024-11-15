@@ -58,7 +58,7 @@
             @foreach ($navLinks as $label => $navLink)
                 @if (is_array($navLink))
                     <x-collapsible>
-                        <x-slot:trigger>{{ $label }}</x-slot:trigger>
+                        <x-slot:trigger>{{ $label }}<x-icon.chevron /></x-slot:trigger>
                         <x-slot:content class="space-y-4 pl-4 pt-4">
                             @if (array_is_list($navLink))
                                 @foreach ($navLink[0] as $subLabel => $subNavLink)
