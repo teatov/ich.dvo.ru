@@ -1,7 +1,7 @@
 <header class="max-w-screen-1.5xl container sticky left-0 right-0 top-0 mx-auto bg-background px-4 lg:px-15"
     x-data="{ headerOpen: false }">
     <div class="flex items-center justify-between border-b py-3">
-        <x-ui.link href="/" class="block font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-ui.link>
+        <x-ui.link href="/" class="block text-sm font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-ui.link>
 
         <nav class="hidden xl:block">
             <ul class="flex gap-x-4">
