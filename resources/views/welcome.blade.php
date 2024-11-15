@@ -14,7 +14,7 @@
             </div>
             <div class="w-[52%]">
                 <x-img style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);"
-                    src="https://plus.unsplash.com/premium_photo-1661432575489-b0400f4fea58?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    src="https://images.unsplash.com/photo-1608037222011-cbf484177126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </div>
         </div>
         <div class="flex justify-center pt-6">
