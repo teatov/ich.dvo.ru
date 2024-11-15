@@ -9,7 +9,7 @@
                         @foreach ($sectionColumns as $column)
                             <div class="w-full space-y-0.5">
                                 @foreach ($column as $label => $navLink)
-                                    <li><x-ui.link href="{{ $navLink }}">{{ $label }}</x-ui.link>
+                                    <li><x-link href="{{ $navLink }}">{{ $label }}</x-link>
                                     </li>
                                 @endforeach
                             </div>
@@ -19,8 +19,8 @@
             @endforeach
         </nav>
         <div class="flex flex-col items-start justify-between space-y-4 md:items-end">
-            <x-ui.button href="/">Связаться с нами</x-ui.button>
-            <x-ui.link href="{{ route('privacy') }}">Политика конфиденциальности</x-ui.link>
+            <x-button href="/">Связаться с нами</x-button>
+            <x-link href="{{ route('privacy') }}">Политика конфиденциальности</x-link>
         </div>
     </div>
 </footer>

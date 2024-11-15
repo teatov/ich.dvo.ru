@@ -1,39 +1,39 @@
 <header class="max-w-screen-1.5xl container sticky left-0 right-0 top-0 mx-auto bg-background px-4 lg:px-15"
     x-data="{ headerOpen: false }">
     <div class="flex items-center justify-between border-b py-3">
-        <x-ui.link href="/" class="block text-sm font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-ui.link>
+        <x-link href="/" class="block text-sm font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-link>
 
         <nav class="hidden xl:block">
             <ul class="flex gap-x-4">
                 @foreach ($navLinks as $label => $navLink)
                     @if (is_array($navLink) && !array_is_list($navLink))
-                        <x-ui.dropdown wrapperClasses="mt-6">
+                        <x-dropdown wrapperClasses="mt-6">
                             <x-slot:trigger>{{ $label }}</x-slot:trigger>
                             <x-slot:content class="flex flex-col divide-y">
                                 @foreach ($navLink as $subLabel => $subNavLink)
-                                    <li><x-ui.link href="{{ $subNavLink }}"
-                                            class="mx-5 my-3 block">{{ $subLabel }}</x-ui.link></li>
+                                    <li><x-link href="{{ $subNavLink }}"
+                                            class="mx-5 my-3 block">{{ $subLabel }}</x-link></li>
                                 @endforeach
                             </x-slot:content>
-                        </x-ui.dropdown>
+                        </x-dropdown>
                     @elseif (is_array($navLink) && array_is_list($navLink))
-                        <x-ui.dropdown
+                        <x-dropdown
                             wrapperClasses="mt-6 left-0 right-0 max-w-screen-1.5xl container mx-auto px-4 lg:px-15">
                             <x-slot:trigger>{{ $label }}</x-slot:trigger>
                             <x-slot:content class="columns-4 space-y-6 px-24 py-16">
                                 @foreach ($navLink[0] as $subLabel => $subNavLink)
-                                    <li class="text-center"><x-ui.link
-                                            href="{{ $subNavLink }}">{{ $subLabel }}</x-ui.link></li>
+                                    <li class="text-center"><x-link
+                                            href="{{ $subNavLink }}">{{ $subLabel }}</x-link></li>
                                 @endforeach
                             </x-slot:content>
-                        </x-ui.dropdown>
+                        </x-dropdown>
                     @else
-                        <li><x-ui.link href="{{ $navLink }}">{{ $label }}</x-ui.link></li>
+                        <li><x-link href="{{ $navLink }}">{{ $label }}</x-link></li>
                     @endif
                 @endforeach
             </ul>
         </nav>
-        <x-ui.button href="/" class="hidden xl:block">Связаться с нами</x-ui.button>
+        <x-button href="/" class="hidden xl:block">Связаться с нами</x-button>
 
         <div class="flex items-center xl:hidden">
             <button @click="headerOpen = ! headerOpen" class="flex items-center justify-center p-3">
@@ -55,22 +55,22 @@
         <ul class="space-y-4 overflow-hidden border-b py-4">
             @foreach ($navLinks as $label => $navLink)
                 @if (is_array($navLink))
-                    <x-ui.collapsible>
+                    <x-collapsible>
                         <x-slot:trigger>{{ $label }}</x-slot:trigger>
                         <x-slot:content class="space-y-4 pl-4 pt-4">
                             @if (array_is_list($navLink))
                                 @foreach ($navLink[0] as $subLabel => $subNavLink)
-                                    <li><x-ui.link href="{{ $subNavLink }}">{{ $subLabel }}</x-ui.link></li>
+                                    <li><x-link href="{{ $subNavLink }}">{{ $subLabel }}</x-link></li>
                                 @endforeach
                             @else
                                 @foreach ($navLink as $subLabel => $subNavLink)
-                                    <li><x-ui.link href="{{ $subNavLink }}">{{ $subLabel }}</x-ui.link></li>
+                                    <li><x-link href="{{ $subNavLink }}">{{ $subLabel }}</x-link></li>
                                 @endforeach
                             @endif
                         </x-slot:content>
-                    </x-ui.collapsible>
+                    </x-collapsible>
                 @else
-                    <li><x-ui.link href="{{ $navLink }}">{{ $label }}</x-ui.link></li>
+                    <li><x-link href="{{ $navLink }}">{{ $label }}</x-link></li>
                 @endif
             @endforeach
         </ul>

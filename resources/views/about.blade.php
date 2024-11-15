@@ -5,7 +5,7 @@
 
     <x-layout.breadcrumb>Институт</x-layout.breadcrumb>
 
-    <x-ui.h1>Об институте</x-ui.h1>
+    <x-h1>Об институте</x-h1>
 
-    <x-ui.lead>Lorem ipsum dolor sit amet, consectetur adipiscing elit</x-ui.lead>
+    <x-lead>Lorem ipsum dolor sit amet, consectetur adipiscing elit</x-lead>
 </x-app-layout>

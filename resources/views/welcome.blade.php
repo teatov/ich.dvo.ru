@@ -13,7 +13,7 @@
                     <p class="text-neutral-light">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit, sed do</p>
                 </div>
                 <div class="mt-6">
-                    <x-ui.button>Подробнее</x-ui.button>
+                    <x-button>Подробнее</x-button>
                 </div>
             </div>
             <div class="mt-6 flex justify-center">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="mx-auto my-0 mb-16 max-w-screen-md">
-            <x-ui.minibreadcrumb class=''>Об институте</x-ui.minibreadcrumb>
+            <x-minibreadcrumb class=''>Об институте</x-minibreadcrumb>
             <div class="mb-8 text-neutral-light">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
@@ -34,7 +34,7 @@
                     consequat. </p>
             </div>
             <div class="">
-                <x-ui.showMore>Подробнее</x-ui.showMore>
+                <x-showMore>Подробнее</x-showMore>
             </div>
         </div>
     </section>
@@ -46,7 +46,7 @@
             <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
                 <a href="" class="">
                     <img src="" alt="" class="">
-                    <x-ui.h3>Lorem ipsum dolor sit amet</x-ui.h3>
+                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
                     <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                     {{-- <div class="border-b-2 border-neutral"></div> --}}
@@ -58,7 +58,7 @@
             <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
                 <a href="" class="">
                     <img src="" alt="" class="">
-                    <x-ui.h3>Lorem ipsum dolor sit amet</x-ui.h3>
+                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
                     <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                     {{-- <div class="border-b-2 border-neutral"></div> --}}
@@ -70,7 +70,7 @@
             <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
                 <a href="" class="">
                     <img src="" alt="" class="">
-                    <x-ui.h3>Lorem ipsum dolor sit amet</x-ui.h3>
+                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
                     <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                     {{-- <div class="border-b-2 border-neutral"></div> --}}
@@ -82,7 +82,7 @@
             <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
                 <a href="" class="">
                     <img src="" alt="" class="">
-                    <x-ui.h3>Lorem ipsum dolor sit amet</x-ui.h3>
+                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
                     <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                     {{-- <div class="border-b-2 border-neutral"></div> --}}
@@ -93,75 +93,75 @@
             </li>
         </ul>
         <div class="mt-8 flex justify-center">
-            <x-ui.button>Все тематики</x-ui.button>
+            <x-button>Все тематики</x-button>
         </div>
     </section>
     <section class="pb-20 pt-16">
         <div class="flex justify-start pb-10">
-            <x-ui.h1>
+            <x-h1>
                 Направления работы института
-            </x-ui.h1>
+            </x-h1>
         </div>
         <div class="pb-10">
             <ul class="flex flex-wrap justify-between gap-y-10 pb-10">
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
                 <li class="max-w-72">
                     <img src="" alt="" class="">
-                    <x-ui.h3 class="pb-5">Название Направления</x-ui.h3>
+                    <x-h3 class="pb-5">Название Направления</x-h3>
                     <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. </p>
                     <a href="" class="">Подробнее</a>
                 </li>
             </ul>
-            <x-ui.showmore>Показать еще</x-ui.showmore>
+            <x-showmore>Показать еще</x-showmore>
         </div>
     </section>
     <section class="mb-20 flex justify-between bg-neutral-lighter pb-75px pl-20 pt-20">
@@ -176,7 +176,7 @@
         </div>
     </section>
     <section class="mb-16">
-        <x-ui.minibreadcrumb>Новости</x-ui.minibreadcrumb>
+        <x-minibreadcrumb>Новости</x-minibreadcrumb>
         <h2 class="text-5xl font-bold">Наши новости</h2>
         <div class="mt-8">
             <ul class="flex justify-between">
@@ -184,7 +184,7 @@
                     <a href="" class="">
                         <img src="" alt="image" class="mb-5">
                     </a>
-                    <x-ui.minibreadcrumb>Категория</x-ui.minibreadcrumb>
+                    <x-minibreadcrumb>Категория</x-minibreadcrumb>
                     <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor</h3>
                     <p class="mb-6 pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -195,7 +195,7 @@
                 <li class="w-96 rounded-lg border-2 border-solid border-neutral px-5 pb-10 pt-5">
                     <a href="" class="">
                         <img src="" alt="image" class="mb-5">
-                        <x-ui.minibreadcrumb>Категория</x-ui.minibreadcrumb>
+                        <x-minibreadcrumb>Категория</x-minibreadcrumb>
                         <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                             do eiusmod tempor</h3>
                         <p class="mb-6 pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -206,7 +206,7 @@
                 <li class="w-96 rounded-lg border-2 border-solid border-neutral px-5 pb-10 pt-5">
                     <a href="" class="">
                         <img src="" alt="image" class="mb-5">
-                        <x-ui.minibreadcrumb>Категория</x-ui.minibreadcrumb>
+                        <x-minibreadcrumb>Категория</x-minibreadcrumb>
                         <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                             do eiusmod tempor</h3>
                         <p class="mb-6 pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
