@@ -11,3 +11,9 @@
         @apply border-neutral ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
     }
 }
+
+@layer components {
+    .container {
+        @apply max-w-screen-1.5xl mx-auto px-4 lg:px-15;
+    }
+}

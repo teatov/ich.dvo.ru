@@ -1,3 +1,5 @@
+@props(['container' => true])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -14,7 +16,7 @@
 
 <body class="relative flex min-h-screen flex-col gap-y-16 font-sans antialiased">
     <x-layout.header />
-    <main class="max-w-screen-1.5xl container mx-auto grow px-4 lg:px-15">
+    <main @class(['grow', 'container' => $container])>
         {{ $slot }}
     </main>
     <x-layout.footer />
