@@ -47,13 +47,13 @@
             <ul class="my-8 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
                 @foreach (['1', '2', '3', '4'] as $theme)
                     <li class="rounded bg-background">
-                        <div class="space-y-5 border-b p-10">
+                        <div class="space-y-5 border-b p-4 md:p-10">
                             <x-icon.placeholder />
                             <x-h4>Lorem ipsum dolor sit amet {{ $theme }}</x-h4>
                             <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor</x-p>
                         </div>
-                        <div class="px-10 py-4">
+                        <div class="px-4 py-4 md:px-10">
                             <x-link href="/{{ $theme }}" class="text-xs font-semibold">Подробнее</x-link>
                         </div>
                     </li>
@@ -83,8 +83,8 @@
         <x-link href="/" variant="primary">Показать ещё</x-link>
     </section>
 
-    <section class="container flex flex-col bg-neutral-lighter py-14 lg:flex-row">
-        <div class="p-6 lg:w-1/2">
+    <section class="container flex flex-col gap-y-4 bg-neutral-lighter py-14 lg:flex-row">
+        <div class="md:p-6 lg:w-1/2">
             <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
             <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</x-p>
@@ -103,7 +103,7 @@
                 <li class="rounded-xl border p-5">
                     <x-img class="h-auto rounded"
                         src="https://images.unsplash.com/photo-1562411053-c9ac630a5934?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                    <div class="space-y-5 p-5">
+                    <div class="space-y-5 pt-5 md:p-5">
                         <x-badge>Категория</x-badge>
                         <x-h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             {{ $article }}</x-h4>
