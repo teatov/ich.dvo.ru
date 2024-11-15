@@ -4,16 +4,17 @@
     </x-slot>
 
     <section class="container">
-        <div class="flex bg-neutral-lighter">
-            <div class="w-[48%] py-12 pl-16">
-                <h2 class="text-7xl font-semibold">Lorem ipsum dolor sit amet, consectetur</h2>
-                <p class="mb-6 mt-4 text-3xl text-neutral-darker">Lorem ipsum dolor sit amet, consectetur adipiscing
+        <div class="flex flex-col bg-neutral-lighter lg:flex-row">
+            <div class="p-4 lg:w-[48%] xl:py-12 xl:pl-16">
+                <h2 class="text-4xl font-semibold sm:text-5xl xl:text-7xl">Lorem ipsum dolor sit amet, consectetur</h2>
+                <p class="mb-6 mt-4 text-2xl text-neutral-darker xl:text-3xl">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing
                     elit, sed do
                 </p>
                 <x-button href="/">Подробнее</x-button>
             </div>
-            <div class="w-[52%]">
-                <x-img style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);"
+            <div class="lg:w-[52%]">
+                <x-img class="lg:clip-path h-72 lg:h-full"
                     src="https://images.unsplash.com/photo-1608037222011-cbf484177126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </div>
         </div>
@@ -82,14 +83,14 @@
         <x-link href="/" variant="primary">Показать ещё</x-link>
     </section>
 
-    <section class="container flex bg-neutral-lighter py-14">
-        <div class="w-1/2 p-6">
+    <section class="container flex flex-col bg-neutral-lighter py-14 lg:flex-row">
+        <div class="p-6 lg:w-1/2">
             <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
             <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</x-p>
             <x-link href="{{ route('equipment') }}">Подробнее</x-link>
         </div>
-        <div class="h-72 w-1/2">
+        <div class="h-72 lg:w-1/2">
             <x-img class="rounded-xl"
                 src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         </div>

@@ -1,4 +1,4 @@
-<header class="container sticky left-0 right-0 top-0 bg-background" x-data="{ headerOpen: false }">
+<header class="container sticky left-0 right-0 top-0 z-10 bg-background" x-data="{ headerOpen: false }">
     <div class="flex items-center justify-between border-b py-3">
         <x-link href="/" class="block text-sm font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-link>
 
