@@ -5,15 +5,15 @@
 
     <section class="container">
         <div class="flex bg-neutral-lighter">
-            <div class="w-1/2 py-12 pl-16">
+            <div class="w-[48%] py-12 pl-16">
                 <h2 class="text-7xl font-semibold">Lorem ipsum dolor sit amet, consectetur</h2>
                 <p class="mb-6 mt-4 text-3xl text-neutral-darker">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do
                 </p>
                 <x-button href="/">Подробнее</x-button>
             </div>
-            <div class="w-1/2">
-                <x-img
+            <div class="w-[52%]">
+                <x-img style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);"
                     src="https://plus.unsplash.com/premium_photo-1661432575489-b0400f4fea58?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </div>
         </div>
