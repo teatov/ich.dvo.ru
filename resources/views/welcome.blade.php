@@ -12,7 +12,10 @@
                 </p>
                 <x-button href="/">Подробнее</x-button>
             </div>
-            <div class="w-1/2 bg-neutral"></div>
+            <div class="w-1/2">
+                <x-img
+                    src="https://plus.unsplash.com/premium_photo-1661432575489-b0400f4fea58?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
         </div>
         <div class="flex justify-center pt-6">
             <div class="flex flex-nowrap gap-4">
@@ -86,7 +89,10 @@
                 dolore magna aliqua.</x-p>
             <x-link href="{{ route('equipment') }}">Оборудование</x-link>
         </div>
-        <div class="w-1/2 rounded-xl bg-neutral"></div>
+        <div class="h-72 w-1/2">
+            <x-img class="rounded-xl"
+                src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </div>
     </section>
 
     <section class="container py-16">
@@ -94,7 +100,8 @@
         <ul class="my-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             @foreach (['1', '2', '3'] as $article)
                 <li class="rounded-xl border p-5">
-                    <div class="aspect-video rounded bg-neutral"></div>
+                    <x-img class="h-auto rounded"
+                        src="https://images.unsplash.com/photo-1562411053-c9ac630a5934?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                     <div class="space-y-5 p-5">
                         <x-badge>Категория</x-badge>
                         <x-h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
