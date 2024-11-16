@@ -1,223 +1,125 @@
-<x-app-layout>
+<x-app-layout container="">
     <x-slot:title>
         Институт химии ДВО РАН
     </x-slot>
-    <section>
-        <div class="mb-16">
-            <div class='mt-5 flex flex-col justify-start bg-neutral-lighter px-16 pb-8 pt-12'>
-                <div class="">
-                    <span class="mb-4 text-center text-7xl font-semibold">Lorem ipsum<br>dolor sit
-                        amet,<br>consectetur</span>
-                </div>
-                <div class="col mt-4 text-3xl font-normal">
-                    <p class="text-neutral-light">Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit, sed do</p>
-                </div>
-                <div class="mt-6">
-                    <x-button>Подробнее</x-button>
-                </div>
-            </div>
-            <div class="mt-6 flex justify-center">
-                <ul class="flex gap-x-4">
-                    <li class="active h-2 w-2 rounded bg-foreground"></li>
-                    <li class="h-2 w-2 rounded bg-neutral"></li>
-                    <li class="h-2 w-2 rounded bg-neutral"></li>
-                    <li class="h-2 w-2 rounded bg-neutral"></li>
-                </ul>
-            </div>
-        </div>
-        <div class="mx-auto my-0 mb-16 max-w-screen-md">
-            <x-minibreadcrumb class=''>Об институте</x-minibreadcrumb>
-            <div class="mb-8 text-neutral-light">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. </p>
-            </div>
-            <div class="">
-                <x-showMore>Подробнее</x-showMore>
-            </div>
-        </div>
-    </section>
-    <section class="pb-10">
-        <div class="pb-8 pt-14 text-5xl">
-            <h2 class="font-semibold">Тематики института 2023</h2>
-        </div>
-        <ul class="mt-8 flex justify-between">
-            <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
-                <a href="" class="">
-                    <img src="" alt="" class="">
-                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
-                    <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </p>
-                    {{-- <div class="border-b-2 border-neutral"></div> --}}
-                    <a href="{{ route('themes') }}" class="text-xs font-semibold text-primary-detailed">
-                        Подробнее
-                    </a>
-                </a>
-            </li>
-            <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
-                <a href="" class="">
-                    <img src="" alt="" class="">
-                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
-                    <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </p>
-                    {{-- <div class="border-b-2 border-neutral"></div> --}}
-                    <a href="{{ route('themes') }}" class="text-xs font-semibold text-primary-detailed">
-                        Подробнее
-                    </a>
-                </a>
-            </li>
-            <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
-                <a href="" class="">
-                    <img src="" alt="" class="">
-                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
-                    <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </p>
-                    {{-- <div class="border-b-2 border-neutral"></div> --}}
-                    <a href="{{ route('themes') }}" class="text-xs font-semibold text-primary-detailed">
-                        Подробнее
-                    </a>
-                </a>
-            </li>
-            <li class="max-w-72 rounded bg-neutral-lighter pb-5 pl-9 pr-6 pt-9">
-                <a href="" class="">
-                    <img src="" alt="" class="">
-                    <x-h3>Lorem ipsum dolor sit amet</x-h3>
-                    <p class="pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </p>
-                    {{-- <div class="border-b-2 border-neutral"></div> --}}
-                    <a href="{{ route('themes') }}" class="text-xs font-semibold text-primary-detailed">
-                        Подробнее
-                    </a>
-                </a>
-            </li>
-        </ul>
-        <div class="mt-8 flex justify-center">
-            <x-button>Все тематики</x-button>
-        </div>
-    </section>
-    <section class="pb-20 pt-16">
-        <div class="flex justify-start pb-10">
-            <x-h1>
-                Направления работы института
-            </x-h1>
-        </div>
-        <div class="pb-10">
-            <ul class="flex flex-wrap justify-between gap-y-10 pb-10">
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-                <li class="max-w-72">
-                    <img src="" alt="" class="">
-                    <x-h3 class="pb-5">Название Направления</x-h3>
-                    <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. </p>
-                    <a href="" class="">Подробнее</a>
-                </li>
-            </ul>
-            <x-showmore>Показать еще</x-showmore>
-        </div>
-    </section>
-    <section class="mb-20 flex justify-between bg-neutral-lighter pb-75px pl-20 pt-20">
-        <div class="w-434px">
-            <h3 class="pb-5 text-3xl font-semibold">В институте можно оставить заявку на аренду оборудования</h3>
-            <p class="pb-7 text-neutral-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
-            <button class="text-xs font-semibold text-primary-detailed">Подробнее</button>
-        </div>
-        <div class="align-items-center mr-14 h-72 w-650px content-center rounded-lg bg-neutral-form text-center">
-            <div class="">Image</div>
-        </div>
-    </section>
-    <section class="mb-16">
-        <x-minibreadcrumb>Новости</x-minibreadcrumb>
-        <h2 class="text-5xl font-bold">Наши новости</h2>
-        <div class="mt-8">
-            <ul class="flex justify-between">
-                <li class="w-96 rounded-lg border-2 border-solid border-neutral px-5 pb-10 pt-5">
-                    <a href="" class="">
-                        <img src="" alt="image" class="mb-5">
-                    </a>
-                    <x-minibreadcrumb>Категория</x-minibreadcrumb>
-                    <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor</h3>
-                    <p class="mb-6 pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="" class="">Подробнее</a>
 
-                </li>
-                <li class="w-96 rounded-lg border-2 border-solid border-neutral px-5 pb-10 pt-5">
-                    <a href="" class="">
-                        <img src="" alt="image" class="mb-5">
-                        <x-minibreadcrumb>Категория</x-minibreadcrumb>
-                        <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor</h3>
-                        <p class="mb-6 pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="" class="pt-6">Подробнее</a>
-                    </a>
-                </li>
-                <li class="w-96 rounded-lg border-2 border-solid border-neutral px-5 pb-10 pt-5">
-                    <a href="" class="">
-                        <img src="" alt="image" class="mb-5">
-                        <x-minibreadcrumb>Категория</x-minibreadcrumb>
-                        <h3 class="text-xl font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor</h3>
-                        <p class="mb-6 pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="" class="mt-6">Подробнее</a>
-                    </a>
-                </li>
-            </ul>
+    <section class="container">
+        <div class="flex flex-col bg-neutral-lighter lg:flex-row">
+            <div class="p-4 lg:w-[48%] xl:py-12 xl:pl-16">
+                <h2 class="text-4xl font-semibold sm:text-5xl xl:text-7xl">Lorem ipsum dolor sit amet, consectetur</h2>
+                <p class="mb-6 mt-4 text-2xl text-neutral-darker xl:text-3xl">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing
+                    elit, sed do
+                </p>
+                <x-button href="/">Подробнее</x-button>
+            </div>
+            <div class="lg:w-[52%]">
+                <x-img class="lg:clip-path h-72 lg:h-full"
+                    src="https://images.unsplash.com/photo-1608037222011-cbf484177126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </div>
+        </div>
+        <div class="flex justify-center pt-6">
+            <div class="flex flex-nowrap gap-4">
+                @foreach ([true, false, false, false] as $page)
+                    <svg width="9" height="8" viewBox="0 0 9 8" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" @class(['text-neutral' => !$page, 'text-foreground' => $page])>
+                        <circle cx="4.75" cy="4" r="4" fill="currentColor" />
+                    </svg>
+                @endforeach
+            </div>
         </div>
     </section>
-    <section class='mb-6 content-center bg-neutral-lighter py-52 text-center'>
-        <span>Форма обратной связи</span>
+
+    <section class="container my-16">
+        <div class="mx-auto max-w-screen-md">
+            <x-badge>Об институте</x-badge>
+            <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</x-p>
+            <x-link href="{{ route('about') }}" variant="primary">Подробнее</x-link>
+        </div>
+    </section>
+
+    <section class="bg-neutral-lighter">
+        <div class="container py-14">
+            <x-h2>Тематики института {{ date('Y') }}</x-h2>
+            <ul class="my-8 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+                @foreach (['1', '2', '3', '4'] as $theme)
+                    <li class="rounded bg-background">
+                        <div class="space-y-5 border-b p-4 md:p-10">
+                            <x-icon.placeholder />
+                            <x-h4>Lorem ipsum dolor sit amet {{ $theme }}</x-h4>
+                            <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor</x-p>
+                        </div>
+                        <div class="px-4 py-4 md:px-10">
+                            <x-link href="/{{ $theme }}" class="text-xs font-semibold">Подробнее</x-link>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+            <div class="flex justify-center">
+                <x-button href="{{ route('themes') }}">Все тематики</x-button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-14">
+        <x-h2>Направления работы института</x-h2>
+        <ul class="my-8 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+            @foreach (['1', '2', '3', '4', '5', '6', '7', '8'] as $direction)
+                <li class="space-y-5">
+                    <x-icon.placeholder />
+                    <x-h4>Lorem ipsum dolor sit amet {{ $direction }}</x-h4>
+                    <div>
+                        <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor</x-p>
+                        <x-link href="/{{ $direction }}" class="mt-2 block text-xs font-semibold">Подробнее</x-link>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+        <x-link href="/" variant="primary">Показать ещё</x-link>
+    </section>
+
+    <section class="container flex flex-col gap-y-4 bg-neutral-lighter py-14 lg:flex-row">
+        <div class="md:p-6 lg:w-1/2">
+            <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
+            <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</x-p>
+            <x-link href="{{ route('equipment') }}">Подробнее</x-link>
+        </div>
+        <div class="h-72 lg:w-1/2">
+            <x-img class="rounded-xl"
+                src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        </div>
+    </section>
+
+    <section class="container py-16">
+        <x-h2>Наши новости</x-h2>
+        <ul class="my-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+            @foreach (['1', '2', '3'] as $article)
+                <li class="rounded-xl border p-5">
+                    <x-img class="h-auto rounded"
+                        src="https://images.unsplash.com/photo-1562411053-c9ac630a5934?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    <div class="space-y-5 pt-5 md:p-5">
+                        <x-badge>Категория</x-badge>
+                        <x-h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            {{ $article }}</x-h4>
+                        <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</x-p>
+                        <x-link href="/{{ $article }}" class="mt-2 block text-xs font-semibold">Подробнее</x-link>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+        <x-link href="{{ route('news') }}" variant="primary">Все новости</x-link>
+    </section>
+
+    <section class="bg-primary/20">
+        <div class="container py-14 text-center text-neutral-darker">
+            Форма обратной связи
+        </div>
     </section>
 </x-app-layout>

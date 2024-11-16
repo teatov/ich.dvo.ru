@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@alpinejs/collapse": "^3.14.3",
         "@fontsource-variable/inter": "^5.1.0",
         "alpinejs": "^3.14.3",
         "autoprefixer": "^10.4.20",
