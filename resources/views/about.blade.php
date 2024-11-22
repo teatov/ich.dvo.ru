@@ -37,10 +37,11 @@
             </ul>
         </div>
     </section>
-    <section class='mt-16'>
-        <div class='flex justify-between'>
+    <div class="border border-solid border-neutral"></div>
+    <section class='mt-16 mb-24'>
+        <div class='flex justify-between items-center'>
             <div class="max-w-[532px]">
-                <h2 class='font-bold text-5xl mb-5'>Заголовок</h2>
+                <h3 class='font-bold text-5xl mb-5'>Заголовок</h3>
                 <p class="text-[#606567] leading-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     <br><br>
@@ -49,6 +50,27 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
             <div class="py-60 px-80 bg-[#d6d6d6]">Image</div>
+        </div>
+    </section>
+    <section class="">
+        <div class=" flex items-center gap-x-16">
+            <div class="max-w-[532px]">
+                <h3 class="font-bold text-5xl mb-5 ">Наши партнёры</h3>
+                <p class="text-[#606567] leading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+            </div>
+            <div class="w-full">
+                <ul class="flex max-w-[548px] flex-wrap gap-x-8 gap-y-8 mx-auto">
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                    <li class="px-15 pt-4 pb-4 bg-neutral-lighter items-center text-center text-xl"><a href="#!">logo</a></li>
+                </ul>
+            </div>
         </div>
     </section>
 </x-app-layout>
