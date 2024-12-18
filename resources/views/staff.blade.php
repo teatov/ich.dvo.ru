@@ -19,10 +19,10 @@
     <section class="mb-16">
         <h2 class="font-bold text-5xl mb-5">Главные контакты</h2>
         <div class="">
-            <ul class='flex justify-between'>
+            <ul class='flex  xl:justify-between '>
                 <li class='flex flex-col max-w-[300px]'>
-                    <div class="">
-                        <img class='h-[385px]' src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="">
+                    <div class="w-full">
+                        <img class='h-[385px] w-full' src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="">
                     </div>
                     <h3 class='text-xl font-semibold leading-[25px] mt-3 mb-1'>Имя Фамилия</h3>
                     <span class='text-[#606567] mb-6'>Должность</span>
@@ -39,7 +39,6 @@
                     </button>
                     <hr>
                 </li>
-
                 <li class='flex flex-col max-w-[300px] '>
                     <div class="">
                         <img class='h-[385px]' src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="">
@@ -59,7 +58,6 @@
                     </button>
                     <hr>
                 </li>
-
                 <li class='flex flex-col max-w-[300px] '>
                     <div class="">
                         <img class='h-[385px]' src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="">
@@ -133,7 +131,62 @@
                     <span class="text-[#606568]">Должность</span>
                 </div>
             </li>
-
+            <li class="flex flex-col max-w-[300px] rounded-[5px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1 text-center">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568] text-sm">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px] rounded-[5px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1 text-center">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568] text-sm">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px] rounded-[5px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1 text-center">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568] text-sm">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568]">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px] rounded-[5px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1 text-center">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568] text-sm">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px] rounded-[5px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1 text-center">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568] text-sm">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px] rounded-[5px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1 text-center">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568] text-sm">Должность</span>
+                </div>
+            </li>
+            <li class="flex flex-col max-w-[300px]" >
+                <img src="https://avatars.mds.yandex.net/i?id=d9140878d603f5786dd4854cf1a15637-3028607-images-thumbs&n=13" alt="" class="h-96 mb-3">
+                <div class="flex flex-col gap-y-1">
+                    <h3 class="text-xl font-semibold">Имя Фамилия</h3>
+                    <span class="text-[#606568]">Должность</span>
+                </div>
+            </li>
         </ul>
     </section>
     <section class="flex items-center justify-between">
@@ -147,7 +200,7 @@
             </div>
         </div>
         <div class="w-3/5">
-            <img class="max-h-[424px] w-full float-end rounded-[5px] object-cover" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <img class="h-[474px] w-full float-end rounded-[5px] object-cover" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
         </div>
     </section>
 </x-app-layout>
