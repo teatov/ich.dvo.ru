@@ -1,8 +1,8 @@
-<x-app-layout>
+<x-app-layout container="">
     <x-slot:title>
         Тематики
     </x-slot>
-    <section class="mb-16">
+    <section class="mb-16 container">
         <x-layout.breadcrumb>Тематики</x-layout.breadcrumb>
         <x-h1>Тематики</x-h1>
         <x-lead>Lorem ipsum dolor sit amet, consectetur adipiscing elit</x-lead>
@@ -15,21 +15,23 @@
                   incididunt ut labore et dolore magna aliqua. Ut enim </x-lead>
     </section>
     <section class="pt-14 bg-neutral-lighter pb-11 my-16">
-        <h2 class="text-5xl font-semibold mb-8">Тематики 2025</h2>
-        <ul class="flex justify-between">
-            @foreach (['1', '2', '3', '4'] as $info)
-            <div class="bg-background pb-5 rounded-[5px]">
-                <li class=" w-[295px] px-9 pt-9">
-                    <x-h4>Lorem ipsum dolor sit amet</x-h4>
-                    <x-p class="text-base mb-12 mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</x-p>
-                </li>
-                <hr>
-                <x-link href="#!" class="block pl-9 mt-4">Подробнее</x-link>
-            </div>
-            @endforeach
-        </ul>
+        <div class="container">
+            <h2 class="text-5xl font-semibold mb-8">Тематики 2025</h2>
+            <ul class="flex justify-between">
+                @foreach (['1', '2', '3', '4'] as $info)
+                <div class="bg-background pb-5 rounded-[5px]">
+                    <li class=" w-[295px] px-9 pt-9">
+                        <x-h4>Lorem ipsum dolor sit amet</x-h4>
+                        <x-p class="text-base mb-12 mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</x-p>
+                    </li>
+                    <hr>
+                    <x-link href="#!" class="block pl-9 mt-4">Подробнее</x-link>
+                </div>
+                @endforeach
+            </ul>
+        </div>
     </section>
-    <section class="bg-neutral-lighter pb-16 pt-8 px-16 mb-16">
+    <section class="container bg-neutral-lighter pb-16 pt-8 px-16 mb-16">
         <ul class="flex flex-col">
             @foreach (['2025', '2024', '2023', '2022', '2021', '2020', '2019'] as $info)
                 <li class="flex justify-between pt-8 pb-6">
@@ -47,7 +49,7 @@
             @endforeach
         </ul>
     </section>
-    <section class="flex items-center justify-between">
+    <section class="flex items-center justify-between container">
         <div class="w-2/5 max-w-[425px]">
             <div class="">
                 <h2 class="text-5xl leading-[58px] font-bold mb-5">О нашем институте</h2>
