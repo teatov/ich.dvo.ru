@@ -61,3 +61,10 @@ Route::get('/patents', function () {
 Route::get('/privacy', function () {
     return view('privacy');
 })->name('privacy');
+
+Route::get('/event', function () {
+    return view('event');
+})->name('event');
+Route::get('/achievement', function () {
+    return view('achievement');
+})->name('achievement');
