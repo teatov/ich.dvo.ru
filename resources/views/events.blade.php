@@ -7,7 +7,7 @@
         <x-layout.breadcrumb>Мероприятия</x-layout.breadcrumb>
         <x-h1>Мероприятия</x-h1>
         <x-lead>Lorem ipsum dolor sit amet, consectetur adipiscing elit</x-lead>
-        <x-img class="mb-16 max-h-80 w-full rounded object-cover"
+        <x-img class="mb-16 max-h-80 rounded"
             src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
     </section>
 
@@ -35,9 +35,9 @@
                                 <x-p class="mb-4 md:mb-6 text-sm md:text-base">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit...
                                 </x-p>
-                                <button class="w-full md:w-auto rounded bg-[#4c9cd9]/20 px-4 md:px-5 py-2 md:py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-background transition-colors">
+                                <a href="{{ route('event') }}" class="w-full md:w-auto rounded bg-[#4c9cd9]/20 px-4 md:px-5 py-2 md:py-3 text-sm font-semibold text-primary hover:bg-primary hover:text-background transition-colors">
                                     Зарегистрироваться
-                                </button>
+                                </a>
                             </div>
                         </li>
                     @endfor

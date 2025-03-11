@@ -24,7 +24,7 @@
                         <x-p class="mb-4 md:mb-6 text-sm md:text-base">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </x-p>
-                        <x-link class="text-[#242627] text-sm md:text-base">Подробнее</x-link>
+                        <x-link href="{{ route('achievement') }}" class="text-[#242627] text-sm md:text-base">Подробнее</x-link>
                     </div>
                 </li>
             @endfor
