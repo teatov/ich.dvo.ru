@@ -68,3 +68,18 @@ Route::get('/event', function () {
 Route::get('/achievement', function () {
     return view('achievement');
 })->name('achievement');
+Route::get('/dvcsi', function () {
+    return view('dvcsi');
+})->name('dvcsi');
+Route::get('/category', function () {
+    return view('category');
+})->name('category');
+Route::get('/theme', function () {
+    return view('theme');
+})->name('theme');
+Route::get('/guideline', function () {
+    return view('guideline');
+})->name('guideline');
+Route::get('/employee', function () {
+    return view('employee');
+})->name('employee');

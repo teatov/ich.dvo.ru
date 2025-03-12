@@ -29,7 +29,7 @@
                                 adipiscing elit, sed do eiusmod tempor</x-p>
                         </li>
                         <hr>
-                        <x-link href="#!" class="mt-4 block pl-6 md:pl-9">Подробнее</x-link>
+                        <x-link href="{{ route('theme') }}" class="mt-4 block pl-6 md:pl-9">Подробнее</x-link>
                     </div>
                 @endforeach
             </ul>

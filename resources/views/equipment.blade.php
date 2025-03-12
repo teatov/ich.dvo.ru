@@ -1,6 +1,6 @@
 <x-app-layout container="">
     <x-slot:title>
-        Тематики
+        Оборудование
     </x-slot>
 
     <section class="container mb-16 px-4 md:px-0">

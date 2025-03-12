@@ -52,7 +52,7 @@
                         </div>
                         <x-h4 class="sm:text-xl mb-5 max-w-[320px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</x-h4>
                         <x-p class="text-base mb-6 mt-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</x-p>
-                        <x-link class="text-[#242627]">Подробнее</x-link>
+                        <x-link href="{{route('category')}}" class="text-[#242627] cursor-pointer">Подробнее</x-link>
                     </div>
                 </li>
             @endfor
