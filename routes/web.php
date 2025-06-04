@@ -77,9 +77,9 @@ Route::get('/category', function () {
 Route::get('/theme', function () {
     return view('theme');
 })->name('theme');
-Route::get('/guideline', function () {
-    return view('guideline');
-})->name('guideline');
+Route::get('/course', function () {
+    return view('course');
+})->name('course');
 Route::get('/staff-member', function () {
     return view('staff-member');
 })->name('staff-member');

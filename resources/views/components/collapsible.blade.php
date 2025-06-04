@@ -1,5 +1,5 @@
 <div x-data="{ open: false }" @close.stop="open = false">
-    <button class="flex items-center gap-x-1.5 font-medium hover:text-primary active:text-primary-darker"
+    <button class="flex items-center gap-x-1.5 font-medium hover:text-primary active:text-primary-dark"
         @click="open = ! open">{{ $trigger }}</button>
 
     <div x-show="open" x-collapse @click="open = false">
