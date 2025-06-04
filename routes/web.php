@@ -71,9 +71,9 @@ Route::get('/achievement', function () {
 Route::get('/dvcsi', function () {
     return view('dvcsi');
 })->name('dvcsi');
-Route::get('/category', function () {
-    return view('category');
-})->name('category');
+Route::get('/grant-category', function () {
+    return view('grant-category');
+})->name('grant-category');
 Route::get('/theme', function () {
     return view('theme');
 })->name('theme');

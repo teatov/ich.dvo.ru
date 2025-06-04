@@ -25,19 +25,14 @@
                         <x-h4 class="my-0">Сотрудник {{ $employee }}</x-h4>
                         <x-p class="my-0 text-sm">Должность</x-p>
                     </div>
-                    <div x-data="{ open: false }" class="border-b pb-3">
-                        <button class="mb-3 flex items-center gap-1 text-xs font-bold uppercase" @click="open = !open">
-                            <x-icon.accordion-expand class="inline" ::class="{ 'hidden': open }" />
-                            <x-icon.accordion-collapse class="inline" ::class="{ 'hidden': !open }" />
-                            <span>Узнать больше</span>
-                        </button>
-                        <x-p class="my-0 text-sm" x-show="open" x-collapse x-cloak>
+                    <x-reuse.collapsible expandtext="Узнать больше">
+                        <x-p class="my-0 text-sm">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         </x-p>
-                    </div>
+                    </x-reuse.collapsible>
                 </li>
             @endforeach
         </ul>

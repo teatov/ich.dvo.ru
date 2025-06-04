@@ -33,7 +33,8 @@
     <section class="container my-16">
         <div class="mx-auto max-w-screen-md">
             <x-badge>Об институте</x-badge>
-            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex
                 ea commodo consequat.</x-p>
@@ -86,7 +87,8 @@
     <section class="container flex flex-col gap-y-4 bg-neutral-lighter py-14 lg:flex-row">
         <div class="md:p-6 lg:w-1/2">
             <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
-            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et
                 dolore magna aliqua.</x-p>
             <x-link href="{{ route('equipment') }}">Подробнее</x-link>
         </div>
@@ -100,18 +102,12 @@
         <x-h2>Наши новости</x-h2>
         <ul class="my-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
             @foreach (['1', '2', '3'] as $article)
-                <li class="rounded-xl border p-5">
-                    <x-img class="h-auto rounded"
-                        src="https://images.unsplash.com/photo-1562411053-c9ac630a5934?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                    <div class="space-y-5 pt-5 md:p-5">
-                        <x-badge>Категория</x-badge>
-                        <x-h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            {{ $article }}</x-h4>
-                        <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</x-p>
-                        <x-link href="/{{ $article }}" class="mt-2 block text-xs font-semibold">Подробнее</x-link>
-                    </div>
-                </li>
+                <x-reuse.card-picture
+                    imgsrc="https://images.unsplash.com/photo-1562411053-c9ac630a5934?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    category="Категория"
+                    heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor {{ $article }}"
+                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    url="/{{ $article }}" />
             @endforeach
         </ul>
         <x-link href="{{ route('news') }}" variant="primary">Все новости</x-link>
