@@ -55,7 +55,7 @@
     </section>
 
     <section class="container mt-16 flex gap-14">
-        <div class="w-5/12">
+        <div class="w-5/12 py-4">
             <x-h2>Наша команда – залог успеха</x-h2>
             <x-p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
