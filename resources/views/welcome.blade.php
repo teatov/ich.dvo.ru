@@ -33,7 +33,7 @@
     <section class="container my-16">
         <div class="mx-auto max-w-screen-md">
             <x-badge>Об институте</x-badge>
-            <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex
                 ea commodo consequat.</x-p>
@@ -50,7 +50,7 @@
                         <div class="space-y-5 border-b p-4 md:p-10">
                             <x-icon.placeholder />
                             <x-h4>Lorem ipsum dolor sit amet {{ $theme }}</x-h4>
-                            <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor</x-p>
                         </div>
                         <div class="px-4 py-4 md:px-10">
@@ -73,7 +73,7 @@
                     <x-icon.placeholder />
                     <x-h4>Lorem ipsum dolor sit amet {{ $direction }}</x-h4>
                     <div>
-                        <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor</x-p>
                         <x-link href="/{{ $direction }}" class="mt-2 block text-xs font-semibold">Подробнее</x-link>
                     </div>
@@ -86,7 +86,7 @@
     <section class="container flex flex-col gap-y-4 bg-neutral-lighter py-14 lg:flex-row">
         <div class="md:p-6 lg:w-1/2">
             <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
-            <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.</x-p>
             <x-link href="{{ route('equipment') }}">Подробнее</x-link>
         </div>
@@ -107,7 +107,7 @@
                         <x-badge>Категория</x-badge>
                         <x-h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             {{ $article }}</x-h4>
-                        <x-p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        <x-p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</x-p>
                         <x-link href="/{{ $article }}" class="mt-2 block text-xs font-semibold">Подробнее</x-link>
                     </div>
