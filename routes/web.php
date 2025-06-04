@@ -80,6 +80,6 @@ Route::get('/theme', function () {
 Route::get('/guideline', function () {
     return view('guideline');
 })->name('guideline');
-Route::get('/employee', function () {
-    return view('employee');
-})->name('employee');
+Route::get('/staff-member', function () {
+    return view('staff-member');
+})->name('staff-member');
