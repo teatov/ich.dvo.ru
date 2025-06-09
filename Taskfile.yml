@@ -104,3 +104,9 @@ tasks:
     desc: "Запустить оболочку MariaDB"
     cmds:
       - docker compose exec mariadb mariadb -u $DB_USERNAME -p {{.CLI_ARGS}}
+
+  pint:
+    desc: "Отформатировать код с помощью Pint"
+    cmds:
+      - task: exec
+        vars: { CLI_ARGS: "./vendor/bin/pint {{.CLI_ARGS}}" }
