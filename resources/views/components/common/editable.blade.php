@@ -19,6 +19,10 @@
                     textInput.select();
                 },
                 save: async function() {
+                    if (!this.newText) {
+                        this.newText = this.oldText;
+                        return;
+                    }
                     this.isEditing = false;
                     this.delay = true;
                     const response = await fetch('/api/edit-text', {
@@ -43,9 +47,13 @@
             <span :class="isEditing ? 'invisible' : 'cursor-pointer'" x-text="newText"
                 @click="edit(); $nextTick(() => focus())"></span>
             <textarea x-show=isEditing x-ref="textInput" x-model="newText" @keydown.enter.prevent="save" @keydown.escape="cancel"
-                class="absolute inset-0 outline outline-2 outline-offset-2 outline-neutral focus:outline-primary"></textarea>
-            <span x-show=isEditing class="absolute -top-7 right-0 block bg-background text-sm">
+                class="absolute inset-0 outline outline-2 outline-offset-2 outline-neutral focus:outline-primary min-h-4"></textarea>
+            <span x-show=isEditing class="absolute -top-7 right-0 block bg-background px-2 text-sm">
                 <kbd>Enter</kbd> - сохранить, <kbd>Esc</kbd> - отменить
+            </span>
+            <span x-show=isEditing
+                class="absolute -top-7 left-0 block bg-background px-2 font-mono text-sm text-neutral-darker">
+                {{ $key }}
             </span>
             <span x-show=delay class="absolute -top-7 right-0 flex items-center bg-background text-sm">
                 <x-icon.loader class="inline animate-spin" /> Сохранение...
