@@ -12,6 +12,12 @@ class EditTextController extends Controller
         $text = $request->input('text');
         $key = $request->input('key');
 
+        if (!$text || !$key) {
+            return response()->json([
+                'error' => 'Некорректные данные',
+            ], 400);
+        }
+
         $textLine = TextLine::firstOrNew(['id' => $key]);
         $textLine->text = $text;
         $textLine->save();

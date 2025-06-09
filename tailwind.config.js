@@ -27,6 +27,7 @@ export default {
                 dark: "#999999",
                 darker: "#686868",
             },
+            error: "#FF0000",
         },
         extend: {
             fontFamily: {
