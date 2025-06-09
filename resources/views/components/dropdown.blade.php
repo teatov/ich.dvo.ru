@@ -1,7 +1,7 @@
 @props(['chevron' => true])
 
 <div x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
-    <button class="flex items-center gap-x-1.5 font-medium hover:text-primary active:text-primary-dark"
+    <button class="flex flex-col items-center gap-x-1.5 font-medium hover:text-primary active:text-primary-dark"
         @click="open = ! open">
         {{ $trigger }}
         @if ($chevron)
