@@ -29,7 +29,7 @@ class Header extends Component
                     'Направление 6' => '6',
                     'Направление 7' => '7',
                     'Направление 8' => '8',
-                ]
+                ],
             ],
             'Тематики' => route('themes'),
             'Гранты' => route('grants'),

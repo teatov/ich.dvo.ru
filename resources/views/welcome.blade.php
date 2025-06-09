@@ -33,11 +33,8 @@
     <section class="container my-16">
         <div class="mx-auto max-w-screen-md">
             <x-badge>Об институте</x-badge>
-            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex
-                ea commodo consequat.</x-p>
+            <x-common.editable tag="p" class="relative text-xl" key="welcome-lead"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
             <x-link href="{{ route('about') }}" variant="primary">Подробнее</x-link>
         </div>
     </section>

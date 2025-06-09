@@ -8,27 +8,21 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up(): void
     {
-        Schema::create('language_lines', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('group')->index();
-            $table->string('key');
-            $table->json('text');
+        Schema::create('text_lines', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->string('text');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down(): void
     {
-        Schema::dropIfExists('language_lines');
+        Schema::dropIfExists('text_lines');
     }
 };
