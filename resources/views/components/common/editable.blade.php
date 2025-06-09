@@ -21,7 +21,7 @@
                 },
                 save: async function() {
                     if (!this.newText) {
-                        this.newText = this.origText;
+                        this.error = 'Текст не может быть пустым';
                         return;
                     }
                     this.isEditing = false;
@@ -66,7 +66,7 @@
                 <x-icon.loader class="inline animate-spin" /> Сохранение...
             </span>
             <span x-show="error" x-text="error"
-                class="absolute -bottom-7 right-0 block bg-background px-2 font-mono text-sm text-error">
+                class="absolute -bottom-7 right-0 block bg-background px-2 text-sm text-error">
             </span>
             </{{ $tag }}>
 @endif

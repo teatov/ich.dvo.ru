@@ -12,7 +12,7 @@ class EditTextController extends Controller
         $text = $request->input('text');
         $key = $request->input('key');
 
-        if (!$text || !$key) {
+        if (! $text || ! $key) {
             return response()->json([
                 'error' => 'Некорректные данные',
             ], 400);
