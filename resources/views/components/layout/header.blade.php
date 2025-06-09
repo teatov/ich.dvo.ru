@@ -7,8 +7,8 @@
                     @foreach ($navLinks as $label => $navLink)
                         @if (is_array($navLink) && !array_is_list($navLink))
                             <x-dropdown>
-                                <x-slot:trigger>{{ $label }}</x-slot:trigger>
-                                <x-slot:wrapper class="mt-[1.4rem]">
+                                <x-slot:trigger>{!! $label !!}</x-slot:trigger>
+                                <x-slot:wrapper class="mt-4">
                                     <x-slot:content class="flex flex-col divide-y">
                                         @foreach ($navLink as $subLabel => $subNavLink)
                                             <li><x-link href="{{ $subNavLink }}"
