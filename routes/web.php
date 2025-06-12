@@ -83,3 +83,6 @@ Route::get('/course', function () {
 Route::get('/staff-member', function () {
     return view('staff-member');
 })->name('staff-member');
+Route::get('/grant', function () {
+    return view('grant');
+})->name('grant');
