@@ -86,3 +86,9 @@ Route::get('/staff-member', function () {
 Route::get('/grant', function () {
     return view('grant');
 })->name('grant');
+
+Route::prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    });
+});

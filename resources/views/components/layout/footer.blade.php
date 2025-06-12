@@ -1,6 +1,5 @@
 <footer class="bg-foreground text-neutral-darker">
-    <div
-        class="container flex flex-col justify-between gap-y-9 py-14 md:flex-row">
+    <div class="container flex flex-col justify-between gap-y-9 py-14 md:flex-row">
         <nav class="space-y-9 md:min-w-[50%]">
             @foreach ($navLinks as $sectionLabel => $sectionColumns)
                 <div>
@@ -20,7 +19,10 @@
         </nav>
         <div class="flex flex-col items-start justify-between space-y-4 md:items-end">
             <x-button href="/">Связаться с нами</x-button>
-            <x-link href="{{ route('privacy') }}">Политика конфиденциальности</x-link>
+            <div class="flex flex-col items-end">
+                <x-link href="{{ route('privacy') }}">Админ-панель</x-link>
+                <x-link href="{{ route('privacy') }}">Политика конфиденциальности</x-link>
+            </div>
         </div>
     </div>
 </footer>
