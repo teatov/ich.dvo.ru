@@ -3,7 +3,7 @@
         Админ-панель
     </x-slot>
 
-    <section class="mx-auto max-w-screen-sm">
+    <section class="mx-auto max-w-screen-sm space-y-6">
         <x-h3>Профиль</x-h3>
         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
             <form method="post" action="{{ route('verification.send') }}">
@@ -27,7 +27,15 @@
             </form>
         @endif
 
-        <form method="post" action="/admin" class="mt-6 space-y-6">
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <x-button>
+                Выйти из учётной записи
+            </x-button>
+        </form>
+
+        <form method="post" action="/admin" class="space-y-6">
             @csrf
             @method('patch')
             <x-h4>Изменить информацию профиля</x-h4>
@@ -56,7 +64,7 @@
             </div>
         </form>
 
-        <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+        <form method="post" action="{{ route('password.update') }}" class="space-y-6">
             @csrf
             @method('put')
             <x-h4>Изменить пароль</x-h4>
