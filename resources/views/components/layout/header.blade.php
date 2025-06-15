@@ -1,9 +1,9 @@
 <header class="sticky left-0 right-0 top-0 z-10 bg-background" x-data="{ headerOpen: false, contactFormOpen: false }">
     <div class="container">
-        <div class="flex items-center justify-between border-b py-3">
-            <x-link href="/" class="block text-sm font-bold tracking-wider">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-link>
+        <div class="flex items-center justify-between border-b py-3 gap-4">
+            <x-link href="/" class="block text-sm font-bold tracking-wider whitespace-nowrap">ИНСТИТУТ ХИМИИ<br />ДВО РАН</x-link>
             <nav class="hidden xl:block">
-                <ul class="flex gap-x-4">
+                <ul class="flex gap-x-4 text-sm">
                     @foreach ($navLinks as $label => $navLink)
                         @if (is_array($navLink) && !array_is_list($navLink))
                             <x-dropdown>
