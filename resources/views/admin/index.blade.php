@@ -40,18 +40,18 @@
             @method('patch')
             <x-h4>Изменить информацию профиля</x-h4>
 
-            <div>
+            <div class="space-y-1">
                 <x-input-label for="name">Имя пользователя</x-input-label>
-                <x-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)"
+                <x-input id="name" name="name" type="text" :value="old('name', $user->name)"
                     required autofocus autocomplete="name" />
-                <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                <x-input-error :messages="$errors->get('name')" />
             </div>
 
-            <div>
+            <div class="space-y-1">
                 <x-input-label for="email">Адрес эл. почты</x-input-label>
-                <x-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)"
+                <x-input id="email" name="email" type="email" :value="old('email', $user->email)"
                     required autocomplete="username" />
-                <x-input-error class="mt-2" :messages="$errors->get('email')" />
+                <x-input-error :messages="$errors->get('email')" />
             </div>
 
             <div class="flex items-center gap-4">
@@ -69,25 +69,25 @@
             @method('put')
             <x-h4>Изменить пароль</x-h4>
 
-            <div>
+            <div class="space-y-1">
                 <x-input-label for="update_password_current_password">Текущий пароль</x-input-label>
                 <x-input id="update_password_current_password" name="current_password" type="password"
-                    class="mt-1 block w-full" autocomplete="current-password" />
-                <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
+                    autocomplete="current-password" />
+                <x-input-error :messages="$errors->updatePassword->get('current_password')" />
             </div>
 
-            <div>
+            <div class="space-y-1">
                 <x-input-label for="update_password_password">Новый пароль</x-input-label>
-                <x-input id="update_password_password" name="password" type="password" class="mt-1 block w-full"
+                <x-input id="update_password_password" name="password" type="password" class="mt-1"
                     autocomplete="new-password" />
-                <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
+                <x-input-error :messages="$errors->updatePassword->get('password')" />
             </div>
 
-            <div>
+            <div class="space-y-1">
                 <x-input-label for="update_password_password_confirmation">Подтвердите новый пароль</x-input-label>
                 <x-input id="update_password_password_confirmation" name="password_confirmation" type="password"
-                    class="mt-1 block w-full" autocomplete="new-password" />
-                <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
+                    autocomplete="new-password" />
+                <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" />
             </div>
 
             <div class="flex items-center gap-4">

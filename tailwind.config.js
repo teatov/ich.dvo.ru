@@ -28,6 +28,8 @@ export default {
                 darker: "#686868",
             },
             error: "#FF0000",
+            white: "#ffffff",
+            black: "#000000",
         },
         extend: {
             fontFamily: {

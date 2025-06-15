@@ -4,7 +4,7 @@
     </x-slot>
 
     <section
-        class="bg-[url(https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] pb-14 pt-32 text-background">
+        class="bg-[url(https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] pb-14 pt-32 text-white">
         <div class="container space-y-8">
             <x-h1 class="text-left">Название направления</x-h1>
             <p class="max-w-screen-md text-xl">
