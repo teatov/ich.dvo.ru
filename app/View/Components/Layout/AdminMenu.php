@@ -13,8 +13,8 @@ class AdminMenu extends Component
     public function __construct()
     {
         $this->navLinks = [
-            'Админ-панель' => '/admin',
-            'Тексты' => '/admin/texts',
+            'Профиль' => route('admin'),
+            'Тексты' => route('admin.texts'),
         ];
     }
 

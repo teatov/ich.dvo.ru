@@ -20,7 +20,9 @@
         <div class="flex flex-col items-start justify-between space-y-4 md:items-end">
             <x-button href="/">Связаться с нами</x-button>
             <div class="flex flex-col items-end">
-                <x-link href="/admin">Админ-панель</x-link>
+                @auth
+                    <x-link href="/admin">Админ-панель</x-link>
+                @endauth
                 <x-link href="{{ route('privacy') }}">Политика конфиденциальности</x-link>
             </div>
         </div>

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -88,10 +87,5 @@ Route::get('/grant', function () {
     return view('grant');
 })->name('grant');
 
-Route::prefix('admin')->group(function () {
-    Route::get('/', function () {
-        return view('admin.index');
-    });
-
-    Route::get('/texts', [AdminController::class, 'texts']);
-});
+require __DIR__.'/admin.php';
+require __DIR__.'/auth.php';
