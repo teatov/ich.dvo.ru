@@ -4,6 +4,8 @@
     </x-slot>
 
     <section class="mx-auto max-w-screen-md">
+        <x-tiptap-editor />
+
         <table class="w-full text-sm">
             <thead>
                 <tr class="border-b font-semibold">

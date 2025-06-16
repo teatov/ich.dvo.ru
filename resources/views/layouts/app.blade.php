@@ -12,6 +12,10 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('scripts')
+    <script type="module" defer>
+        Alpine.start();
+    </script>
 </head>
 
 <body class="relative flex min-h-screen flex-col gap-y-16 font-sans antialiased">

@@ -8,4 +8,3 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 Alpine.plugin(collapse)
 window.Alpine = Alpine;
-Alpine.start();
