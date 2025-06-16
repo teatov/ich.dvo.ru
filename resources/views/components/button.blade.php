@@ -1,16 +1,23 @@
-@props(['variant' => 'default'])
+@props(['variant' => 'default', 'size' => 'default'])
 
 @php
-    $classes = [
-        'default' =>
-            'bg-primary font-semibold text-nowrap text-background py-3 px-5 rounded hover:bg-primary-lighter active:bg-primary-dark inline-block text-sm',
-        'secondary' =>
-            'bg-background font-semibold text-nowrap text-primary-darker py-3 px-5 rounded hover:bg-neutral-lighter inline-block text-sm',
+    $baseClasses = 'font-semibold text-nowrap rounded inline-flex items-center justify-center';
+    $variantClasses = [
+        'default' => 'bg-primary text-background hover:bg-primary-lighter active:bg-primary-dark ',
+        'secondary' => 'bg-background text-primary-darker hover:bg-neutral-lighter',
+        'none' => 'hover:bg-neutral-lighter',
+    ];
+    $sizeClasses = [
+        'default' => 'py-3 px-5 text-sm',
+        'sm' => 'py-1 px-3 text-xs',
+        'icon' => 'size-9',
     ];
 @endphp
 
 @if ($attributes->has('href'))
-    <a {{ $attributes->twMerge(['class' => $classes[$variant]]) }}>{{ $slot }}</a>
+    <a
+        {{ $attributes->twMerge(['class' => [$baseClasses, $variantClasses[$variant], $sizeClasses[$size]]]) }}>{{ $slot }}</a>
 @else
-    <button {{ $attributes->twMerge(['class' => $classes[$variant]]) }}>{{ $slot }}</button>
+    <button
+        {{ $attributes->twMerge(['class' => [$baseClasses, $variantClasses[$variant], $sizeClasses[$size]]]) }}>{{ $slot }}</button>
 @endif

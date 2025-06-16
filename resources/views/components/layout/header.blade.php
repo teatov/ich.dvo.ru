@@ -7,7 +7,7 @@
                     @foreach ($navLinks as $label => $navLink)
                         @if (is_array($navLink) && !array_is_list($navLink))
                             <x-dropdown>
-                                <x-slot:trigger>{!! $label !!}</x-slot:trigger>
+                                <x-slot:trigger class="flex-col">{!! $label !!}</x-slot:trigger>
                                 <x-slot:wrapper class="mt-4">
                                     <x-slot:content class="flex flex-col divide-y">
                                         @foreach ($navLink as $subLabel => $subNavLink)
@@ -19,7 +19,7 @@
                             </x-dropdown>
                         @elseif (is_array($navLink) && array_is_list($navLink))
                             <x-dropdown>
-                                <x-slot:trigger>{{ $label }}</x-slot:trigger>
+                                <x-slot:trigger class="flex-col">{{ $label }}</x-slot:trigger>
                                 <x-slot:wrapper class="container left-0 right-0 mt-[1.4rem]">
                                     <x-slot:content class="columns-4 space-y-6 px-24 py-16">
                                         @foreach ($navLink[0] as $subLabel => $subNavLink)

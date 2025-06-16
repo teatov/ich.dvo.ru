@@ -21,3 +21,43 @@
         clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 }
+
+.prose a {
+    @apply font-semibold underline underline-offset-4 decoration-primary/20 text-primary decoration-2 hover:text-primary-lighter hover:decoration-primary-lighter active:text-primary-dark active:decoration-primary-dark;
+}
+
+.prose h1 {
+    @apply mb-4 text-4xl font-bold sm:text-6xl;
+}
+
+.prose h2 {
+    @apply mb-4 text-3xl font-bold sm:text-5xl;
+}
+
+.prose h3 {
+    @apply mb-4 text-2xl font-semibold sm:text-3xl;
+}
+
+.prose h4 {
+    @apply mb-4 text-xl font-semibold sm:text-2xl;
+}
+
+.prose h5 {
+    @apply mb-4 text-xl font-semibold;
+}
+
+.prose p {
+    @apply [&:not(:first-child)]:my-4;
+}
+
+.prose blockquote {
+    @apply border-l-2 pl-6 italic;
+}
+
+.prose ul {
+    @apply ml-6 list-disc [&>li]:mt-2;
+}
+
+.prose ol {
+    @apply ml-6 list-decimal [&>li]:mt-2;
+}
