@@ -3,7 +3,7 @@
         {{ $newsArticle->title ?? 'Новая новостная статья' }}
     </x-slot>
 
-    <section class="mx-auto max-w-screen-md">
+    <section class="mx-auto max-w-screen-lg">
         <form method="post" class="space-y-6"
             action="{{ $newsArticle->exists ? route('admin.news-article.update', ['news_article' => $newsArticle]) : route('admin.news-article.store') }}">
             @csrf

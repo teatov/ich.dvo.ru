@@ -4,7 +4,7 @@
     </x-slot>
 
     <div class="flex gap-10">
-        <x-layout.admin-menu class="w-80" />
+        <x-layout.admin-menu />
         <div class="w-full">
             {{ $slot }}
         </div>

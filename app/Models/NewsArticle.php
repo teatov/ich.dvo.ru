@@ -17,7 +17,8 @@ class NewsArticle extends Model implements CardSerializable
         'image_url',
     ];
 
-    public function cardSerialize(): array {
+    public function cardSerialize(): array
+    {
         return [
             'imgSrc' => $this->image_url,
             'heading' => $this->title,

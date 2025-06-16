@@ -47,7 +47,7 @@
 }
 
 .prose p {
-    @apply [&:not(:first-child)]:my-4;
+    @apply [&:not(:first-child)]:my-4 text-neutral-darker text-xl;
 }
 
 .prose blockquote {

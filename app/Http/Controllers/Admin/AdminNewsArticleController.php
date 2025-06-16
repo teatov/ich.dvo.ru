@@ -29,7 +29,7 @@ class AdminNewsArticleController extends Controller
         $newsArticle->fill($request->validated());
         $newsArticle->save();
 
-        return Redirect::route('admin.news-article.edit', ['news_article' => $newsArticle])->with('status', 'saved');
+        return Redirect::route('news-article.show', ['id' => $newsArticle->id])->with('status', 'saved');
     }
 
     public function edit(NewsArticle $newsArticle)
@@ -44,7 +44,7 @@ class AdminNewsArticleController extends Controller
         $newsArticle->fill($request->validated());
         $newsArticle->save();
 
-        return Redirect::route('admin.news-article.edit', ['news_article' => $newsArticle])->with('status', 'saved');
+        return Redirect::route('news-article.show', ['id' => $newsArticle->id])->with('status', 'saved');
     }
 
     public function destroy(NewsArticle $newsArticle)
