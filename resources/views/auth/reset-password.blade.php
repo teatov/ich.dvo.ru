@@ -31,7 +31,7 @@
         </div>
 
         <div class="flex items-center justify-end">
-            <x-button>
+            <x-button type="submit">
                 Сбросить пароль
             </x-button>
         </div>

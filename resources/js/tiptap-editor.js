@@ -123,6 +123,9 @@ document.addEventListener("alpine:init", () => {
             setTextAlign(opts) {
                 editor.chain().focus().setTextAlign(opts).run();
             },
+            getHTML() {
+                return editor.getHTML();
+            },
         };
     });
 });

@@ -20,7 +20,7 @@
                             {{ $textLine->text }}</td>
                     </tr>
                 @endforeach
+            </tbody>
         </table>
-        </tbody>
     </section>
 </x-admin-layout>

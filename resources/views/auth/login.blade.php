@@ -37,7 +37,7 @@
                 </x-link>
             @endif
 
-            <x-button>
+            <x-button type="submit">
                 Войти
             </x-button>
         </div>

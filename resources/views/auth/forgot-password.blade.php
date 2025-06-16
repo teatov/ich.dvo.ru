@@ -14,7 +14,7 @@
         </div>
 
         <div class="flex items-center justify-end">
-            <x-button>
+            <x-button type="submit">
                 Отправить письмо для сброса пароля
             </x-button>
         </div>

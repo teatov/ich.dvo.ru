@@ -43,7 +43,7 @@
                 Уже зарегистрированы?
             </x-link>
 
-            <x-button>
+            <x-button type="submit">
                 Зарегистрироваться
             </x-button>
         </div>

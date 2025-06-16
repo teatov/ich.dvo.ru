@@ -12,7 +12,7 @@
                     <p class="text-gray-800 mt-2 text-sm">
                         Ваш адрес эл. почты не подтверждён.
 
-                        <button
+                        <button type="submit"
                             class="text-gray-600 hover:text-gray-900 focus:ring-indigo-500 rounded-md text-sm underline focus:outline-none focus:ring-2 focus:ring-offset-2">
                             Отправить письмо с подтверждением.
                         </button>
@@ -30,12 +30,12 @@
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
-            <x-button>
+            <x-button type="submit">
                 Выйти из учётной записи
             </x-button>
         </form>
 
-        <form method="post" action="/admin" class="space-y-6">
+        <form method="post" action="{{ route('admin') }}" class="space-y-6">
             @csrf
             @method('patch')
             <x-h4>Изменить информацию профиля</x-h4>
@@ -55,7 +55,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <x-button>Сохранить</x-button>
+                <x-button type="submit">Сохранить</x-button>
 
                 @if (session('status') === 'profile-updated')
                     <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
@@ -91,7 +91,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <x-button>Сохранить</x-button>
+                <x-button type="submit">Сохранить</x-button>
 
                 @if (session('status') === 'password-updated')
                     <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"

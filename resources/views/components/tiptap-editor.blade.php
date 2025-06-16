@@ -1,11 +1,11 @@
-@props(['content' => ''])
+@props(['content' => '', 'name' => ''])
 
 @php
     $activeClasses = 'bg-neutral-lighter text-primary';
     $disabledClasses = 'disabled:opacity-50 disabled:pointer-events-none';
 @endphp
 
-<div x-data="editor(`{{ $content }}`)">
+<div x-data="editor(`{!! $content !!}`)">
     <template x-if="isLoaded()">
         <div class="mb-2 flex gap-1 divide-x">
             <div class="flex">
@@ -293,6 +293,7 @@
     </template>
 
     <div x-ref="element"></div>
+    <input type="hidden" id="{{ $name }}" name="{{ $name }}" :value="getHTML(updatedAt)">
 </div>
 
 @pushOnce('scripts')

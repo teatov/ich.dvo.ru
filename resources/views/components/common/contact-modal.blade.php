@@ -17,7 +17,7 @@
         </div>
 
         <div class="flex items-center justify-end">
-            <x-button>
+            <x-button type="submit">
                 Отправить
             </x-button>
         </div>

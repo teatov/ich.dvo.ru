@@ -15,6 +15,7 @@ class AdminMenu extends Component
         $this->navLinks = [
             'Профиль' => route('admin'),
             'Тексты' => route('admin.texts'),
+            'Новости' => route('admin.news-articles'),
         ];
     }
 

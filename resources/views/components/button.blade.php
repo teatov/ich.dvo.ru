@@ -1,4 +1,4 @@
-@props(['variant' => 'default', 'size' => 'default'])
+@props(['variant' => 'default', 'size' => 'default', 'type'=>'button'])
 
 @php
     $baseClasses = 'font-semibold text-nowrap rounded inline-flex items-center justify-center';
@@ -18,6 +18,6 @@
     <a
         {{ $attributes->twMerge(['class' => [$baseClasses, $variantClasses[$variant], $sizeClasses[$size]]]) }}>{{ $slot }}</a>
 @else
-    <button
+    <button type="{{ $type }}"
         {{ $attributes->twMerge(['class' => [$baseClasses, $variantClasses[$variant], $sizeClasses[$size]]]) }}>{{ $slot }}</button>
 @endif
