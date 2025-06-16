@@ -1,4 +1,4 @@
-<x-modal buttontext="Связаться с нами" modaltitle="Связаться с нами">
+<x-modal buttonText="Связаться с нами" modalTitle="Связаться с нами">
     <form method="POST" action="/" class="space-y-6">
         @csrf
 

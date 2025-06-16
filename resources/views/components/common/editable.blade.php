@@ -1,3 +1,5 @@
+@props(['tag' => 'p', 'key' => '', 'text' => '', 'textareaClass' => ''])
+
 @auth
     <{{ $tag }} {{ $attributes->twMerge(['class' => 'relative hover:underline decoration-dashed']) }}
         x-data="{
@@ -50,7 +52,7 @@
         <span :class="isEditing ? 'invisible' : 'cursor-pointer'" x-text="origText"
             @click="edit(); $nextTick(() => focus())"></span>
         <textarea x-show="isEditing" x-ref="textInput" x-model="newText" @keydown.enter.prevent="save" @keydown.escape="cancel"
-            class="absolute inset-0 min-h-4 outline outline-2 outline-offset-2 outline-neutral focus:outline-primary"></textarea>
+            class="{{ $textareaClass }} absolute inset-0 min-h-4 outline outline-2 outline-offset-2 outline-neutral focus:outline-primary"></textarea>
         <span x-show="isEditing" class="absolute -top-7 right-0 block bg-background px-2 text-sm">
             <kbd>Enter</kbd> - сохранить, <kbd>Esc</kbd> - отменить
         </span>

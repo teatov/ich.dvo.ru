@@ -1,8 +1,8 @@
-@props(['modaltitle' => '', 'buttontext' => 'Открыть'])
+@props(['modalTitle' => '', 'buttonText' => 'Открыть'])
 
 <div x-data="{ modalOpen: false }" @keydown.escape.window="modalOpen = false" class="relative z-50 h-auto w-auto">
     <x-button @click="modalOpen=true" >
-        {{ $buttontext }}
+        {{ $buttonText }}
     </x-button>
     <template x-teleport="body">
         <div x-show="modalOpen" class="fixed left-0 top-0 z-[99] flex h-screen w-screen items-center justify-center"
@@ -19,7 +19,7 @@
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 class="bg-background relative w-full px-7 py-6 sm:max-w-lg sm:rounded-lg">
                 <div class="flex items-center justify-between pb-2">
-                    <h3 class="text-lg font-semibold">{{ $modaltitle }}</h3>
+                    <h3 class="text-lg font-semibold">{{ $modalTitle }}</h3>
                     <button @click="modalOpen=false"
                         class="text-gray-600 hover:text-gray-800 hover:bg-gray-50 absolute right-0 top-0 mr-5 mt-5 flex h-8 w-8 items-center justify-center rounded-full">
                         <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

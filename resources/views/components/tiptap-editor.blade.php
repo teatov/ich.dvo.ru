@@ -74,7 +74,7 @@
                         <path d="M5 19h14" />
                     </svg>
                 </x-button>
-                <x-dropdown :chevron="false" variant="button" :clickinsideclose="false">
+                <x-dropdown :chevron="false" variant="button" :clickInsideClose="false">
                     <x-slot:trigger title="Ссылка" class="size-9" @click="getLinkUrl(); open = !open"
                         ::class="{ '{{ $activeClasses }}': isActive('link', updatedAt) }">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

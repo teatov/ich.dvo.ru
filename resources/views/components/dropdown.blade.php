@@ -1,4 +1,4 @@
-@props(['chevron' => true, 'variant' => 'default', 'clickinsideclose'=>true])
+@props(['chevron' => true, 'variant' => 'default', 'clickInsideClose'=>true])
 
 @php
     $variantClasses = [
@@ -21,7 +21,7 @@
         x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0 scale-95"
         x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-75"
         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
-        @click="{{$clickinsideclose ? 'open = false' : ''}}">
+        @click="{{$clickInsideClose ? 'open = false' : ''}}">
         <div {{ $content->attributes->class('text-nowrap border text-sm bg-background') }}>
             {{ $content }}
         </div>

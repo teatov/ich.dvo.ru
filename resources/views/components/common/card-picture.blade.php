@@ -1,7 +1,7 @@
-@props(['imgsrc' => '', 'category' => '', 'heading' => '', 'text' => '', 'url' => ''])
+@props(['imgSrc' => '', 'category' => '', 'heading' => '', 'text' => '', 'url' => ''])
 
 <li class="rounded-xl border p-5">
-    <x-img class="h-auto rounded" src="{{ $imgsrc }}" />
+    <x-img class="h-auto rounded" src="{{ $imgSrc }}" />
     <div class="space-y-5 pt-5 md:p-5">
         <x-badge>{{ $category }}</x-badge>
         <x-h4>{{ $heading }}</x-h4>

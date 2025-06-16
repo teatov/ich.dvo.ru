@@ -25,7 +25,7 @@
                         <x-h4 class="my-0">Сотрудник {{ $employee }}</x-h4>
                         <x-p class="my-0 text-sm">Должность</x-p>
                     </div>
-                    <x-common.collapsible expandtext="Узнать больше">
+                    <x-common.collapsible expandText="Узнать больше">
                         <x-p class="my-0 text-sm">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco

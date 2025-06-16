@@ -19,7 +19,7 @@ class NewsArticle extends Model implements CardSerializable
 
     public function cardSerialize(): array {
         return [
-            'imgsrc' => $this->image_url,
+            'imgSrc' => $this->image_url,
             'heading' => $this->title,
             'text' => $this->description,
             'url' => route('news-article.show', ['id' => $this->id]),
