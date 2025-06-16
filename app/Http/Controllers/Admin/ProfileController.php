@@ -28,6 +28,6 @@ class ProfileController extends Controller
 
         $request->user()->save();
 
-        return Redirect::route('admin')->with('status', 'profile-updated');
+        return Redirect::route('admin.index')->with('status', 'profile-updated');
     }
 }

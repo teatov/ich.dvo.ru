@@ -30,7 +30,7 @@ document.addEventListener("alpine:init", () => {
                     content: content,
                     editorProps: {
                         attributes: {
-                            class: "p-2 border rounded block w-full prose",
+                            class: "p-2 border rounded block w-full prose min-h-60",
                         },
                     },
                     onCreate({ editor }) {

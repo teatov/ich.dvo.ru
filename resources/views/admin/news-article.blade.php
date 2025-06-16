@@ -4,8 +4,15 @@
     </x-slot>
 
     <section class="mx-auto max-w-screen-md">
-        <form method="post" class="space-y-6">
+        <form method="post" class="space-y-6"
+            action="{{ $newsArticle->exists ? route('admin.news-article.update', ['news_article' => $newsArticle]) : route('admin.news-article.store') }}">
             @csrf
+
+            @if ($newsArticle->exists)
+                @method('patch')
+            @endif
+
+            <x-common.status-message />
 
             <div class="space-y-1">
                 <x-input-label for="title">Заголовок</x-input-label>
@@ -44,15 +51,12 @@
             <div class="flex items-center gap-4">
                 <x-button type="submit">Сохранить</x-button>
             </div>
-
-            @if (session('status') === 'saved')
-                <p class="text-gray-600 text-sm">Сохранено</p>
-            @endif
         </form>
 
         @if ($newsArticle->exists)
             <form method="post" class="space-y-6" x-data=""
-                @submit.prevent="if (confirm('Подтвердите удаление')) $el.submit()">
+                @submit.prevent="if (confirm('Подтвердите удаление')) $el.submit()"
+                action="{{ route('admin.news-article.destroy', ['news_article' => $newsArticle]) }}">
                 @csrf
                 @method('delete')
 

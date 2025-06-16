@@ -22,7 +22,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('admin'));
+        return redirect()->intended(route('admin.index'));
     }
 
     public function destroy(Request $request): RedirectResponse

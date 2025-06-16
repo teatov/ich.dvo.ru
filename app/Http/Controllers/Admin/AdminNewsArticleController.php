@@ -29,30 +29,28 @@ class AdminNewsArticleController extends Controller
         $newsArticle->fill($request->validated());
         $newsArticle->save();
 
-        return Redirect::route('admin.news-articles');
+        return Redirect::route('admin.news-article.edit', ['news_article'=>$newsArticle])->with('status', 'saved');
     }
 
-    public function edit(int $id)
+    public function edit(NewsArticle $newsArticle)
     {
         return view('admin.news-article', [
-            'newsArticle' => NewsArticle::findOrFail($id)
+            'newsArticle' => $newsArticle
         ]);
     }
 
-    public function update(NewsArticleRequest $request, int $id)
+    public function update(NewsArticleRequest $request, NewsArticle $newsArticle)
     {
-        $newsArticle = NewsArticle::findOrFail($id);
         $newsArticle->fill($request->validated());
         $newsArticle->save();
 
-        return Redirect::route('admin.news-article-edit', ['id'=>$id])->with('status', 'saved');
+        return Redirect::route('admin.news-article.edit', ['news_article'=>$newsArticle])->with('status', 'saved');
     }
 
-    public function destroy(int $id)
+    public function destroy(NewsArticle $newsArticle)
     {
-        $newsArticle = NewsArticle::findOrFail($id);
         $newsArticle->delete();
 
-        return Redirect::route('admin.news-articles');
+        return Redirect::route('admin.news-article.index')->with('status', 'deleted');
     }
 }

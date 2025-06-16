@@ -35,7 +35,7 @@
             </x-button>
         </form>
 
-        <form method="post" action="{{ route('admin') }}" class="space-y-6">
+        <form method="post" action="{{ route('admin.index') }}" class="space-y-6">
             @csrf
             <x-h4>Изменить информацию профиля</x-h4>
 
