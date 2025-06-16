@@ -97,18 +97,7 @@
 
     <section class="container py-16">
         <x-h2>Наши новости</x-h2>
-        @php
-            $newsCards = $newsArticles->map(
-                fn($newsArticle): array => [
-                    'imgsrc' => $newsArticle->image_url,
-                    'heading' => $newsArticle->title,
-                    'text' => $newsArticle->description,
-                    'url' => route('news-article.show', ['id' => $newsArticle->id]),
-                ],
-            );
-        @endphp
-
-        <x-common.card-picture-grid class="my-8" :cards="$newsCards" />
+        <x-common.card-picture-grid class="my-8" :cards="$newsArticles->cardSerialize()" />
         <x-link href="{{ route('news') }}" variant="primary">Все новости</x-link>
     </section>
 
