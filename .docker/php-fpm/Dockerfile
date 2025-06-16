@@ -17,4 +17,6 @@ COPY --chown=www:www . /var/www
 
 WORKDIR /var/www
 
+RUN git config --global --add safe.directory /var/www
+
 USER www
