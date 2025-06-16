@@ -18,32 +18,15 @@
                 Перейти на страницу новости
             </x-link>
 
-            <div class="space-y-1">
-                <x-input-label for="title">Заголовок</x-input-label>
-                <x-input id="title" name="title" type="text" value="{{ $newsArticle->title }}" required />
-                <x-input-error :messages="$errors->get('title')" />
-            </div>
+            <x-common.form-input name="title" label="Заголовок" value="{{ $newsArticle->title }}" required />
 
             <x-img class="max-h-80 w-auto rounded" src="{{ $newsArticle->image_url }}" />
 
-            <div class="space-y-1">
-                <x-input-label for="title">URL изображения</x-input-label>
-                <x-input id="image_url" name="image_url" type="text" value="{{ $newsArticle->image_url }}" />
-                <x-input-error :messages="$errors->get('image_url')" />
-            </div>
+            <x-common.form-input name="image_url" label="URL изображения" value="{{ $newsArticle->image_url }}" />
 
-            <div class="space-y-1">
-                <x-input-label for="title">Краткое описание</x-input-label>
-                <x-textarea id="description" name="description" type="text"
-                    value="{{ $newsArticle->description }}" />
-                <x-input-error :messages="$errors->get('description')" />
-            </div>
+            <x-common.form-input name="description" label="Краткое описание" value="{{ $newsArticle->description }}" type="textarea" />
 
-            <div class="space-y-1">
-                <x-input-label for="body">Текст статьи</x-input-label>
-                <x-tiptap-editor name="body" content="{{ $newsArticle->body }}" />
-                <x-input-error :messages="$errors->get('body')" />
-            </div>
+            <x-common.form-input name="body" label="Текст статьи" value="{{ $newsArticle->body }}" type="tiptap-editor" />
 
             @if ($newsArticle->exists)
                 <div>

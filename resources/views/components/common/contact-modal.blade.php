@@ -2,17 +2,9 @@
     <form method="POST" action="/" class="space-y-6">
         @csrf
 
-        <div class="space-y-1">
-            <x-input-label for="email">Адрес эл. почты</x-input-label>
-            <x-input id="email" type="email" name="email" :value="old('email')" required
-                autofocus />
-        </div>
+        <x-common.form-input name="email" label="Адрес эл. почты" type="email" required autofocus />
 
-        <div class="space-y-1">
-            <x-input-label for="message">Сообщение</x-input-label>
-            <x-textarea id="message" type="text" name="message" :value="old('message')" required
-                autofocus />
-        </div>
+        <x-common.form-input name="message" label="Сообщение" type="textarea" required />
 
         <div class="flex items-center justify-end">
             <x-button type="submit">

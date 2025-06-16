@@ -12,7 +12,7 @@ class AdminNewsArticleController extends Controller
     public function index()
     {
         return view('admin.news-articles', [
-            'newsArticles' => orderByDesc('created_at')->get(),
+            'newsArticles' => NewsArticle::orderByDesc('created_at')->get(),
         ]);
     }
 
