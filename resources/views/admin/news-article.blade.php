@@ -1,12 +1,11 @@
 <x-admin-layout>
     <x-slot:title>
-        {{ $newsArticle->title }}
+        {{ $newsArticle->title ?? 'Новая новостная статья' }}
     </x-slot>
 
     <section class="mx-auto max-w-screen-md">
         <form method="post" class="space-y-6">
             @csrf
-            @method('patch')
 
             <div class="space-y-1">
                 <x-input-label for="title">Заголовок</x-input-label>
@@ -23,15 +22,24 @@
             </div>
 
             <div class="space-y-1">
+                <x-input-label for="title">Краткое описание</x-input-label>
+                <x-textarea id="description" name="description" type="text"
+                    value="{{ $newsArticle->description }}" />
+                <x-input-error :messages="$errors->get('description')" />
+            </div>
+
+            <div class="space-y-1">
                 <x-input-label for="body">Текст статьи</x-input-label>
                 <x-tiptap-editor name="body" content="{{ $newsArticle->body }}" />
                 <x-input-error :messages="$errors->get('body')" />
             </div>
 
-            <div>
-                <p>Дата создания: {{ $newsArticle->created_at }}</p>
-                <p>Дата обновления: {{ $newsArticle->updated_at }}</p>
-            </div>
+            @if ($newsArticle->exists)
+                <div>
+                    <p>Дата создания: {{ $newsArticle->created_at }}</p>
+                    <p>Дата обновления: {{ $newsArticle->updated_at }}</p>
+                </div>
+            @endif
 
             <div class="flex items-center gap-4">
                 <x-button type="submit">Сохранить</x-button>
@@ -41,5 +49,17 @@
                 <p class="text-gray-600 text-sm">Сохранено</p>
             @endif
         </form>
+
+        @if ($newsArticle->exists)
+            <form method="post" class="space-y-6" x-data=""
+                @submit.prevent="if (confirm('Подтвердите удаление')) $el.submit()">
+                @csrf
+                @method('delete')
+
+                <div class="flex items-center gap-4">
+                    <x-button variant="danger" type="submit">Удалить</x-button>
+                </div>
+            </form>
+        @endif
     </section>
 </x-admin-layout>

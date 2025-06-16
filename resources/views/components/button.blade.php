@@ -6,6 +6,7 @@
         'default' => 'bg-primary text-background hover:bg-primary-lighter active:bg-primary-dark ',
         'secondary' => 'bg-background text-primary-darker hover:bg-neutral-lighter',
         'none' => 'hover:bg-neutral-lighter',
+        'danger' => 'bg-error text-white',
     ];
     $sizeClasses = [
         'default' => 'py-3 px-5 text-sm',

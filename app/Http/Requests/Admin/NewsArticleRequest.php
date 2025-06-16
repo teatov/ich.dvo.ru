@@ -13,12 +13,14 @@ class NewsArticleRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'max:500'],
+            'description' => ['required', 'string'],
             'body' => [
                 'required',
                 'string',
             ],
             'image_url' => [
                 'string',
+                'nullable',
             ],
         ];
     }

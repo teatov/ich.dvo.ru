@@ -18,16 +18,23 @@ class AdminNewsArticleController extends Controller
 
     public function create()
     {
+        return view('admin.news-article', [
+            'newsArticle' => new NewsArticle()
+        ]);
     }
 
     public function store(NewsArticleRequest $request)
     {
-        //
+        $newsArticle = new NewsArticle();
+        $newsArticle->fill($request->validated());
+        $newsArticle->save();
+
+        return Redirect::route('admin.news-articles');
     }
 
     public function edit(int $id)
     {
-        return view('admin.news-article-edit', [
+        return view('admin.news-article', [
             'newsArticle' => NewsArticle::findOrFail($id)
         ]);
     }
@@ -41,8 +48,11 @@ class AdminNewsArticleController extends Controller
         return Redirect::route('admin.news-article-edit', ['id'=>$id])->with('status', 'saved');
     }
 
-    public function destroy(NewsArticle $newsArticle)
+    public function destroy(int $id)
     {
-        //
+        $newsArticle = NewsArticle::findOrFail($id);
+        $newsArticle->delete();
+
+        return Redirect::route('admin.news-articles');
     }
 }

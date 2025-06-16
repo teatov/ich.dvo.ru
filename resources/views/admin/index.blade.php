@@ -30,14 +30,13 @@
         <form method="POST" action="{{ route('logout') }}">
             @csrf
 
-            <x-button type="submit">
+            <x-button variant="danger" type="submit">
                 Выйти из учётной записи
             </x-button>
         </form>
 
         <form method="post" action="{{ route('admin') }}" class="space-y-6">
             @csrf
-            @method('patch')
             <x-h4>Изменить информацию профиля</x-h4>
 
             <div class="space-y-1">
