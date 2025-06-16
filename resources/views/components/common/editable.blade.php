@@ -22,7 +22,7 @@
                 }
                 this.isEditing = false;
                 this.delay = true;
-                const response = await fetch('/api/edit-text', {
+                const response = await fetch('{{ route('api.edit-text') }}', {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',

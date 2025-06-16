@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\NewsArticleController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', WelcomeController::class);
 
 Route::get('/about', function () {
     return view('about');
@@ -86,6 +86,9 @@ Route::get('/staff-member', function () {
 Route::get('/grant', function () {
     return view('grant');
 })->name('grant');
+
+Route::get('/news/{id}', [NewsArticleController::class, 'show'])
+    ->name('news-article.show');
 
 require __DIR__.'/admin.php';
 require __DIR__.'/auth.php';

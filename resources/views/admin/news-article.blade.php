@@ -14,6 +14,10 @@
 
             <x-common.status-message />
 
+            <x-link href="{{ route('news-article.show', ['id' => $newsArticle->id]) }}" variant="primary">
+                Перейти на страницу новости
+            </x-link>
+
             <div class="space-y-1">
                 <x-input-label for="title">Заголовок</x-input-label>
                 <x-input id="title" name="title" type="text" value="{{ $newsArticle->title }}" required />

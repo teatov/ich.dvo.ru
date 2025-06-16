@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\NewsArticleRequest;
 use App\Models\NewsArticle;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 
 class AdminNewsArticleController extends Controller
@@ -12,30 +12,30 @@ class AdminNewsArticleController extends Controller
     public function index()
     {
         return view('admin.news-articles', [
-            'newsArticles' => NewsArticle::all()
+            'newsArticles' => orderByDesc('created_at')->get(),
         ]);
     }
 
     public function create()
     {
         return view('admin.news-article', [
-            'newsArticle' => new NewsArticle()
+            'newsArticle' => new NewsArticle,
         ]);
     }
 
     public function store(NewsArticleRequest $request)
     {
-        $newsArticle = new NewsArticle();
+        $newsArticle = new NewsArticle;
         $newsArticle->fill($request->validated());
         $newsArticle->save();
 
-        return Redirect::route('admin.news-article.edit', ['news_article'=>$newsArticle])->with('status', 'saved');
+        return Redirect::route('admin.news-article.edit', ['news_article' => $newsArticle])->with('status', 'saved');
     }
 
     public function edit(NewsArticle $newsArticle)
     {
         return view('admin.news-article', [
-            'newsArticle' => $newsArticle
+            'newsArticle' => $newsArticle,
         ]);
     }
 
@@ -44,7 +44,7 @@ class AdminNewsArticleController extends Controller
         $newsArticle->fill($request->validated());
         $newsArticle->save();
 
-        return Redirect::route('admin.news-article.edit', ['news_article'=>$newsArticle])->with('status', 'saved');
+        return Redirect::route('admin.news-article.edit', ['news_article' => $newsArticle])->with('status', 'saved');
     }
 
     public function destroy(NewsArticle $newsArticle)
