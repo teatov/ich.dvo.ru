@@ -27,9 +27,10 @@ class AdminNewsArticleController extends Controller
     {
         $newsArticle = new NewsArticle;
         $newsArticle->fill($request->validated());
+        $newsArticle->setSlug();
         $newsArticle->save();
 
-        return Redirect::route('news-article.show', ['id' => $newsArticle->id])->with('status', 'saved');
+        return Redirect::route('news-article.show', ['slug' => $newsArticle->slug])->with('status', 'saved');
     }
 
     public function edit(NewsArticle $newsArticle)
@@ -42,9 +43,10 @@ class AdminNewsArticleController extends Controller
     public function update(NewsArticleRequest $request, NewsArticle $newsArticle)
     {
         $newsArticle->fill($request->validated());
+        $newsArticle->setSlug();
         $newsArticle->save();
 
-        return Redirect::route('news-article.show', ['id' => $newsArticle->id])->with('status', 'saved');
+        return Redirect::route('news-article.show', ['slug' => $newsArticle->slug])->with('status', 'saved');
     }
 
     public function destroy(NewsArticle $newsArticle)

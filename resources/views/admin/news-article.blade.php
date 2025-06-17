@@ -12,7 +12,7 @@
 
             @if ($newsArticle->exists)
                 @method('patch')
-                <x-link :href="route('news-article.show', ['id' => $newsArticle->id])" variant="primary">
+                <x-link :href="route('news-article.show', ['slug' => $newsArticle->slug])" variant="primary">
                     Перейти на страницу новости
                 </x-link>
                 <div>

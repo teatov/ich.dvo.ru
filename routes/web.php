@@ -85,7 +85,7 @@ Route::get('/grant', function () {
     return view('grant');
 })->name('grant');
 
-Route::get('/news/{id}', [NewsArticleController::class, 'show'])
+Route::get('/news/{slug}', [NewsArticleController::class, 'show'])
     ->name('news-article.show');
 
 require __DIR__.'/admin.php';
