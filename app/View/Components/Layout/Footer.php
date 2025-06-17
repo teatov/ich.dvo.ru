@@ -21,7 +21,7 @@ class Footer extends Component
                     'Сотрудники' => route('staff'),
                 ],
                 [
-                    'Новости' => route('news'),
+                    'Новости' => route('news-articles.index'),
                     'Мероприятия' => route('events'),
                     'Достижения' => route('achievements'),
                 ],

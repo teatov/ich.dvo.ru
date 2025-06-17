@@ -33,7 +33,7 @@
     <section class="container my-16">
         <div class="mx-auto max-w-screen-md">
             <x-badge>Об институте</x-badge>
-            <x-common.editable tag="p" class="relative text-xl" key="welcome-lead"
+            <x-common.editable tag="p" class="relative text-xl text-neutral-darker" key="welcome-lead"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
             <x-link href="{{ route('about') }}" variant="primary">Подробнее</x-link>
         </div>
@@ -84,9 +84,8 @@
     <section class="container flex flex-col gap-y-4 bg-neutral-lighter py-14 lg:flex-row">
         <div class="md:p-6 lg:w-1/2">
             <x-h3>В институте можно оставить заявку на аренду оборудования</x-h3>
-            <x-p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua.</x-p>
+            <x-common.editable tag="p" class="my-4 text-xl text-neutral-darker" key="welcome-equipment"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
             <x-link href="{{ route('equipment') }}">Подробнее</x-link>
         </div>
         <div class="h-72 lg:w-1/2">
@@ -98,7 +97,7 @@
     <section class="container py-16">
         <x-h2>Наши новости</x-h2>
         <x-common.card-picture-grid class="my-8" :cards="$newsArticles->cardSerialize()" />
-        <x-link href="{{ route('news') }}" variant="primary">Все новости</x-link>
+        <x-link href="{{ route('news-articles.index') }}" variant="primary">Все новости</x-link>
     </section>
 
     <section class="bg-primary/20">

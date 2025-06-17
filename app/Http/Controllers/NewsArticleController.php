@@ -6,6 +6,13 @@ use App\Models\NewsArticle;
 
 class NewsArticleController extends Controller
 {
+    public function index()
+    {
+        return view('news', [
+            'newsArticles' => NewsArticle::all(),
+        ]);
+    }
+
     public function show(int $id)
     {
         return view('news-article', [

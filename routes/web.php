@@ -30,9 +30,7 @@ Route::get('/jobs', function () {
     return view('jobs');
 })->name('jobs');
 
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
+Route::get('/news', [NewsArticleController::class, 'index'])->name('news-articles.index');
 
 Route::get('/achievements', function () {
     return view('achievements');
