@@ -16,6 +16,16 @@ class AdminMenu extends Component
             'Профиль' => route('admin.index'),
             'Тексты' => route('admin.texts'),
             'Новости' => route('admin.news-article.index'),
+            'Сотрудники' => route('admin.staff.index'),
+            'Направления' => route('admin.course.index'),
+            'Тематики' => route('admin.theme.index'),
+            'Гранты' => route('admin.grant.index'),
+            'Вакансии' => route('admin.job.index'),
+            'Организации' => route('admin.organization.index'),
+            'Мероприятия' => route('admin.event.index'),
+            'Оборудование' => route('admin.equipment.index'),
+            'Диссертации' => route('admin.dissertation.index'),
+            'Патенты' => route('admin.patent.index'),
         ];
     }
 
