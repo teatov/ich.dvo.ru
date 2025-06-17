@@ -39,10 +39,10 @@
             @csrf
             <x-h4>Изменить информацию профиля</x-h4>
 
-            <x-common.form-input name="name" label="Имя пользователя" value="{{ $user->name }}" required autofocus
+            <x-common.form-input name="name" label="Имя пользователя" :value="$user->name" required
                 autocomplete="name" />
 
-            <x-common.form-input name="email" label="Адрес эл. почты" value="{{ $user->email }}" type="email"
+            <x-common.form-input name="email" label="Адрес эл. почты" :value="$user->email" type="email"
                 required autocomplete="username" />
 
             <div class="flex items-center gap-4">

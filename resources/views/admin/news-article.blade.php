@@ -14,19 +14,19 @@
 
             <x-common.status-message />
 
-            <x-link href="{{ route('news-article.show', ['id' => $newsArticle->id]) }}" variant="primary">
+            <x-link :href="route('news-article.show', ['id' => $newsArticle->id])" variant="primary">
                 Перейти на страницу новости
             </x-link>
 
-            <x-common.form-input name="title" label="Заголовок" value="{{ $newsArticle->title }}" required />
+            <x-common.form-input name="title" label="Заголовок" :value="$newsArticle->title" required />
 
-            <x-img class="max-h-80 w-auto rounded" src="{{ $newsArticle->image_url }}" />
+            <x-img class="max-h-80 w-auto rounded" :src="$newsArticle->image_url" />
 
-            <x-common.form-input name="image_url" label="URL изображения" value="{{ $newsArticle->image_url }}" />
+            <x-common.form-input name="image_url" label="URL изображения" :value="$newsArticle->image_url" />
 
-            <x-common.form-input name="description" label="Краткое описание" value="{{ $newsArticle->description }}" type="textarea" />
+            <x-common.form-input name="description" label="Краткое описание" :value="$newsArticle->description" type="textarea" />
 
-            <x-common.form-input name="body" label="Текст статьи" value="{{ $newsArticle->body }}" type="tiptap-editor" />
+            <x-common.form-input name="body" label="Текст статьи" :value="$newsArticle->body" type="tiptap-editor" />
 
             @if ($newsArticle->exists)
                 <div>

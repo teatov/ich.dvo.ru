@@ -39,7 +39,7 @@
             aliquip ex ea commodo consequat.
         </x-p>
         <div>
-            <x-link variant="primary" href="{{ route('about') }}">Подробнее</x-link>
+            <x-link variant="primary" :href="route('about')">Подробнее</x-link>
         </div>
     </section>
 
@@ -50,7 +50,7 @@
             dolore magna aliqua.
         </x-p>
         <div class="mt-10 flex justify-center">
-            <x-button href="{{ route('staff') }}">Познакомиться</x-button>
+            <x-button :href="route('staff')">Познакомиться</x-button>
         </div>
     </section>
 
@@ -66,7 +66,7 @@
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
             </x-p>
             <div>
-                <x-button href="{{ route('jobs') }}">Наши вакансии</x-button>
+                <x-button :href="route('jobs')">Наши вакансии</x-button>
             </div>
         </div>
         <x-img class="w-7/12 rounded"

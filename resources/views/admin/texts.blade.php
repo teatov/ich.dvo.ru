@@ -16,8 +16,8 @@
                 @foreach ($textLines as $textLine)
                     <tr class="border-b">
                         <td class="text-nowrap p-2 font-mono">{{ $textLine->id }}</td>
-                        <x-common.editable tag="td" class="p-2" textareaClass="p-2" key="{{ $textLine->id }}"
-                            text="{{ $textLine->text }}" />
+                        <x-common.editable tag="td" class="p-2" textareaClass="p-2" :key="$textLine->id"
+                            :text="$textLine->text" />
                     </tr>
                 @endforeach
             </tbody>

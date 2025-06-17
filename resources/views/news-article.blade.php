@@ -6,13 +6,13 @@
     <section class="mx-auto max-w-screen-lg space-y-6">
         @auth
             <x-common.status-message />
-            <x-button href="{{ route('admin.news-article.edit', ['news_article' => $newsArticle]) }}">
+            <x-button :href="route('admin.news-article.edit', ['news_article' => $newsArticle])">
                 Редактировать статью
             </x-button>
         @endauth
         <x-h1>{{ $newsArticle->title }}</x-h1>
         <x-lead>{{ $newsArticle->created_at }}</x-lead>
-        <x-img src="{{ $newsArticle->image_url }}" class="rounded" />
+        <x-img :src="$newsArticle->image_url" class="rounded" />
         <article class="prose">
             {!! $newsArticle->body !!}
         </article>

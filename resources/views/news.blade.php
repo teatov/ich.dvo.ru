@@ -16,10 +16,10 @@
             <div class="flex w-1/2 flex-col justify-center">
                 <x-h3>{{ $firstArticle->title }}</x-h3>
                 <x-p>{{ $firstArticle->description }}</x-p>
-                <x-link href="{{ route('news-article.show', ['id' => $firstArticle->id]) }}"
+                <x-link :href="route('news-article.show', ['id' => $firstArticle->id])"
                     class="mt-4 block text-xs font-semibold">Подробнее</x-link>
             </div>
-            <x-img class="h-auto w-1/2 rounded" src="{{ $firstArticle->image_url }}" />
+            <x-img class="h-auto w-1/2 rounded" :src="$firstArticle->image_url" />
         </div>
         <x-common.card-picture-grid class="my-8" :cards="$moreArticles->cardSerialize()" />
     </section>

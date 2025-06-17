@@ -77,7 +77,7 @@
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
             </x-p>
             <div>
-                <x-button href="{{ route('about') }}">Подробнее</x-button>
+                <x-button :href="route('about')">Подробнее</x-button>
             </div>
         </div>
         <x-img class="w-7/12 rounded"

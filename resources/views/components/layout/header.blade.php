@@ -11,7 +11,7 @@
                                 <x-slot:wrapper class="mt-4">
                                     <x-slot:content class="flex flex-col divide-y">
                                         @foreach ($navLink as $subLabel => $subNavLink)
-                                            <li><x-link href="{{ $subNavLink }}"
+                                            <li><x-link :href="$subNavLink"
                                                     class="mx-5 my-3 block">{{ $subLabel }}</x-link></li>
                                         @endforeach
                                     </x-slot:content>
@@ -24,13 +24,13 @@
                                     <x-slot:content class="columns-4 space-y-6 px-24 py-16">
                                         @foreach ($navLink[0] as $subLabel => $subNavLink)
                                             <li class="text-center"><x-link
-                                                    href="{{ $subNavLink }}">{{ $subLabel }}</x-link></li>
+                                                    :href="$subNavLink">{{ $subLabel }}</x-link></li>
                                         @endforeach
                                     </x-slot:content>
                                 </x-slot:wrapper>
                             </x-dropdown>
                         @else
-                            <li><x-link href="{{ $navLink }}">{{ $label }}</x-link></li>
+                            <li><x-link :href="$navLink">{{ $label }}</x-link></li>
                         @endif
                     @endforeach
                 </ul>

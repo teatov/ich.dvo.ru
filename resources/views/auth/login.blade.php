@@ -15,7 +15,7 @@
 
         <div class="flex items-center justify-end gap-4">
             @if (Route::has('password.request'))
-                <x-link href="{{ route('password.request') }}">
+                <x-link :href="route('password.request')">
                     Забыли пароль?
                 </x-link>
             @endif

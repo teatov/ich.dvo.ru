@@ -16,7 +16,7 @@
             autocomplete="new-password" />
 
         <div class="flex items-center justify-end gap-4">
-            <x-link href="{{ route('login') }}">
+            <x-link :href="route('login')">
                 Уже зарегистрированы?
             </x-link>
 
