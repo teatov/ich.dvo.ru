@@ -17,7 +17,7 @@ class NewsArticleController extends Controller
     {
         return view('news-article', [
             'newsArticle' => NewsArticle::findOrFail($id),
-            'otherNewsArticles' => NewsArticle::orderByDesc('created_at')->take(3)->get(),
+            'otherNewsArticles' => NewsArticle::where('id', '!=', $id)->orderByDesc('created_at')->take(3)->get(),
         ]);
     }
 }

@@ -8,15 +8,14 @@
             action="{{ $newsArticle->exists ? route('admin.news-article.update', ['news_article' => $newsArticle]) : route('admin.news-article.store') }}">
             @csrf
 
-            @if ($newsArticle->exists)
-                @method('patch')
-            @endif
-
             <x-common.status-message />
 
-            <x-link :href="route('news-article.show', ['id' => $newsArticle->id])" variant="primary">
-                Перейти на страницу новости
-            </x-link>
+            @if ($newsArticle->exists)
+                @method('patch')
+                <x-link :href="route('news-article.show', ['id' => $newsArticle->id])" variant="primary">
+                    Перейти на страницу новости
+                </x-link>
+            @endif
 
             <x-common.form-input name="title" label="Заголовок" :value="$newsArticle->title" required />
 
