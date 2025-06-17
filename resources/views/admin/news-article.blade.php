@@ -15,6 +15,10 @@
                 <x-link :href="route('news-article.show', ['id' => $newsArticle->id])" variant="primary">
                     Перейти на страницу новости
                 </x-link>
+                <div>
+                    <p>Дата создания: {{ $newsArticle->created_at }}</p>
+                    <p>Дата обновления: {{ $newsArticle->updated_at }}</p>
+                </div>
             @endif
 
             <x-common.form-input name="title" label="Заголовок" :value="$newsArticle->title" required />
@@ -26,13 +30,6 @@
             <x-common.form-input name="description" label="Краткое описание" :value="$newsArticle->description" type="textarea" />
 
             <x-common.form-input name="body" label="Текст статьи" :value="$newsArticle->body" type="tiptap-editor" />
-
-            @if ($newsArticle->exists)
-                <div>
-                    <p>Дата создания: {{ $newsArticle->created_at }}</p>
-                    <p>Дата обновления: {{ $newsArticle->updated_at }}</p>
-                </div>
-            @endif
 
             <div class="flex items-center gap-4">
                 <x-button type="submit">Сохранить</x-button>
