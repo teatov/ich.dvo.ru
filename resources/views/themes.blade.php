@@ -46,7 +46,7 @@
             class="relative mx-auto w-full divide-y overflow-hidden rounded-md bg-neutral-lighter px-16 py-6">
             @foreach (['2022', '2021', '2020', '2019', '2018'] as $year)
                 <div x-data="{ id: $id('accordion') }" class="group cursor-pointer">
-                    <button @click="setActiveAccordion(id)"
+                    <button type="button" @click="setActiveAccordion(id)"
                         class="flex w-full select-none items-center justify-between py-7 text-3xl font-semibold">
                         <span>{{ $year }}</span>
                         <x-icon.accordion-big-expand class="inline" ::class="{ 'hidden': activeAccordion == id }" />

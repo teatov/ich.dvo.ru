@@ -8,7 +8,7 @@
 @endphp
 
 <div x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
-    <button
+    <button type="button"
         {{ $trigger->attributes->class($variantClasses[$variant]) }}
         @click="open = !open">
         {{ $trigger }}

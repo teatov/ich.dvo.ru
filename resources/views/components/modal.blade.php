@@ -20,7 +20,7 @@
                 class="bg-background relative w-full px-7 py-6 sm:max-w-lg sm:rounded-lg">
                 <div class="flex items-center justify-between pb-2">
                     <h3 class="text-lg font-semibold">{{ $modalTitle }}</h3>
-                    <button @click="modalOpen=false"
+                    <button  type="button" @click="modalOpen=false"
                         class="text-gray-600 hover:text-gray-800 hover:bg-gray-50 absolute right-0 top-0 mr-5 mt-5 flex h-8 w-8 items-center justify-center rounded-full">
                         <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor">
