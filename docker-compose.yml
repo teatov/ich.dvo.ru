@@ -32,7 +32,9 @@ services:
         restart: unless-stopped
         working_dir: /var/www/
         volumes:
-            - ./:/var/www
+            - type: bind
+              source: ./
+              target: /var/www
         networks:
             - ich-dvo-ru
         depends_on:
