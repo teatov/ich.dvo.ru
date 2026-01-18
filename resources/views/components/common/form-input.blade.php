@@ -21,6 +21,8 @@
                 {{ $attributes }} />
         @endif
 
-        <x-input-error :messages="$errors->get($name)" />
+        @if (!empty($errors))
+            <x-input-error :messages="$errors->get($name)" />
+        @endif
     </div>
 @endif

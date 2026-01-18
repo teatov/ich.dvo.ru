@@ -1,6 +1,6 @@
 @props(['modalTitle' => '', 'buttonText' => 'Открыть'])
 
-<div x-data="{ modalOpen: false }" @keydown.escape.window="modalOpen = false" class="relative z-50 h-auto w-auto">
+<div x-data="{ modalOpen: false }" @keydown.escape.window="modalOpen = false" class="relative z-50 h-auto w-auto hidden xl:block">
     <x-button @click="modalOpen=true" >
         {{ $buttonText }}
     </x-button>
