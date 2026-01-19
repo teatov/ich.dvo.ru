@@ -21,9 +21,9 @@
             <x-button href="/">Связаться с нами</x-button>
             <div class="flex flex-col items-end">
                 @auth
-                    <x-link :href="route('admin.index')">Админ-панель</x-link>
+                    <x-link :href="'admin.index'">Админ-панель</x-link>
                 @endauth
-                <x-link :href="route('privacy')">Политика конфиденциальности</x-link>
+                <x-link :href="'privacy'">Политика конфиденциальности</x-link>
             </div>
         </div>
     </div>

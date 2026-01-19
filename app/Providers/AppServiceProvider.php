@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use A17\Twill\Facades\TwillNavigation;
+use A17\Twill\View\Components\Navigation\NavigationLink;
 use App\Interfaces\CardSerializable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
@@ -21,10 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Collection::macro('cardSerialize', function () {
-            return $this->map(function (CardSerializable $cardSerializable) {
-                return $cardSerializable->cardSerialize();
-            });
-        });
+        TwillNavigation::addLink(
+            NavigationLink::make()->forModule('pages')
+        );
     }
 }
