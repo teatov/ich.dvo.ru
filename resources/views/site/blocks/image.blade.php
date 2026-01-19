@@ -1,3 +1,4 @@
-<div class="py-8 mx-auto max-w-2xl flex items-center">
-    <img src="{{$block->image('highlight', 'desktop')}}"/>
+<div>
+    <x-img class="rounded w-auto h-auto mx-auto" src="{{ $block->image('image', 'desktop') }}"
+        alt="{{ $block->imageAltText('image') }}" />
 </div>

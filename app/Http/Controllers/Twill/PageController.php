@@ -32,11 +32,11 @@ class PageController extends BaseModuleController
         $form = parent::getForm($model);
 
         $form->add(
-            Input::make()->name('description')->label('Description')->translatable()
+            Input::make()->name('description')->label('Описание')->translatable()
         );
 
         $form->add(
-            Medias::make()->name('cover')->label('Cover image')
+            Medias::make()->name('cover')->label('Обложка')
         );
 
         $form->add(
@@ -54,7 +54,7 @@ class PageController extends BaseModuleController
         $table = parent::additionalIndexTableColumns();
 
         $table->add(
-            Text::make()->field('description')->title('Description')
+            Text::make()->field('description')->title('Описание')
         );
 
         return $table;
