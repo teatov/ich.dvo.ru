@@ -9,9 +9,9 @@ use App\Models\Homepage;
 
 class PageDisplayController extends Controller
 {
-    public function show(string $slug, PageRepository $pageRepository): View
+    public function show(string $slug, PageRepository $repository): View
     {
-        $page = $pageRepository->forSlug($slug);
+        $page = $repository->forSlug($slug);
 
         if (!$page) {
             abort(404);
