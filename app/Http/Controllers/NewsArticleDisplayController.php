@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\NewsArticleRepository;
-use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 
 class NewsArticleDisplayController extends Controller
@@ -12,7 +11,7 @@ class NewsArticleDisplayController extends Controller
     {
         $page = $repository->forSlug($slug);
 
-        if (!$page) {
+        if (! $page) {
             abort(404);
         }
 

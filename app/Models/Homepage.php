@@ -3,14 +3,14 @@
 namespace App\Models;
 
 use A17\Twill\Models\Behaviors\HasBlocks;
-use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
+use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Model;
 
 class Homepage extends Model
 {
-    use HasBlocks, HasTranslation, HasMedias, HasRevisions;
+    use HasBlocks, HasMedias, HasRevisions, HasTranslation;
 
     protected $fillable = [
         'published',
@@ -24,5 +24,4 @@ class Homepage extends Model
         'description',
         'about',
     ];
-
 }

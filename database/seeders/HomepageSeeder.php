@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use App\Repositories\HomepageRepository;
 use App\Models\Homepage;
+use App\Repositories\HomepageRepository;
+use Illuminate\Database\Seeder;
 
 class HomepageSeeder extends Seeder
 {

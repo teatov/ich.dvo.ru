@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Homepage;
 use App\Repositories\PageRepository;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
-use App\Models\Homepage;
 
 class PageDisplayController extends Controller
 {
@@ -13,7 +12,7 @@ class PageDisplayController extends Controller
     {
         $page = $repository->forSlug($slug);
 
-        if (!$page) {
+        if (! $page) {
             abort(404);
         }
 
