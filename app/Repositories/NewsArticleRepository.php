@@ -17,4 +17,12 @@ class NewsArticleRepository extends ModuleRepository
     {
         $this->model = $model;
     }
+
+    public function all()
+    {
+        return $this->model
+            ->published()
+            ->orderBy('created_at', 'desc')
+            ->get();
+    }
 }

@@ -9,12 +9,17 @@ class NewsArticleDisplayController extends Controller
 {
     public function show(string $slug, NewsArticleRepository $repository): View
     {
-        $page = $repository->forSlug($slug);
+        $item = $repository->forSlug($slug);
 
-        if (! $page) {
+        if (! $item) {
             abort(404);
         }
 
-        return view('site.newsArticle', ['item' => $page]);
+        return view('site.newsArticle', ['item' => $item]);
+    }
+
+    public function index(NewsArticleRepository $repository): View
+    {
+        return view('site.news', ['items' => $repository->all()]);
     }
 }

@@ -11,13 +11,13 @@ class PageDisplayController extends Controller
 {
     public function show(string $slug, PageRepository $repository): View
     {
-        $page = $repository->forSlug($slug);
+        $item = $repository->forSlug($slug);
 
-        if (! $page) {
+        if (! $item) {
             abort(404);
         }
 
-        return view('site.page', ['item' => $page]);
+        return view('site.page', ['item' => $item]);
     }
 
     public function home(): View

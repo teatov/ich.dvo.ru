@@ -7,7 +7,7 @@ use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasRevisions;
 use A17\Twill\Models\Model;
 
-class History extends Model 
+class History extends Model
 {
     use HasBlocks, HasTranslation, HasRevisions;
 
@@ -16,10 +16,9 @@ class History extends Model
         'title',
         'description',
     ];
-    
+
     public $translatedAttributes = [
         'title',
         'description',
     ];
-    
 }
