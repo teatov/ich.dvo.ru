@@ -1,1 +1,1 @@
-<p>{!! $block->translatedInput('text') !!}</p>
+<div class="prose">{!! $block->input('text') !!}</div>
