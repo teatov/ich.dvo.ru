@@ -94,11 +94,11 @@
         </div>
     </section>
 
-    {{-- <section class="container py-16">
+    <section class="container py-16">
         <x-h2>Наши новости</x-h2>
-        <x-common.card-picture-grid class="my-8" :cards="$newsArticles->cardSerialize()" />
-        <x-link :href="'news-articles.index'" variant="primary">Все новости</x-link>
-    </section> --}}
+        <x-common.card-picture-grid class="my-8" :cards="$newsArticles" />
+        <x-link :href="route('frontend.news.index')" variant="primary">Все новости</x-link>
+    </section>
 
     <section class="bg-primary/20">
         <div class="container py-14 text-center text-neutral-darker">

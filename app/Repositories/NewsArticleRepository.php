@@ -25,4 +25,13 @@ class NewsArticleRepository extends ModuleRepository
             ->orderBy('created_at', 'desc')
             ->get();
     }
+
+    public function last3()
+    {
+        return $this->model
+            ->published()
+            ->orderBy('created_at', 'desc')
+            ->limit(3)
+            ->get();
+    }
 }

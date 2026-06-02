@@ -25,13 +25,20 @@ class NewsArticle extends CardSerializeable
     public $slugAttributes = [
         'title',
     ];
-    
-    public function makeCard(): array {
-        return [
-            'imgSrc' => $this->image('cover'),
-            'heading' => $this->title,
-            'text' => $this->description,
-            'url' => route('frontend.news.show', ['slug' => $this->slug])
-        ];
+
+    public function getCardImageSrc(): string {
+        return $this->image('cover') ?? '';
+    }
+
+    public function getCardHeading(): string {
+        return $this->title;
+    }
+
+    public function getCardText(): string {
+        return $this->description ?? '';
+    }
+
+    public function getCardUrl(): string {
+        return route('frontend.news.show', ['slug' => $this->slug]);
     }
 }

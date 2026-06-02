@@ -6,6 +6,7 @@ use App\Models\Homepage;
 use App\Models\History;
 use App\Repositories\PageRepository;
 use Illuminate\Contracts\View\View;
+use App\Repositories\NewsArticleRepository;
 
 class PageDisplayController extends Controller
 {
@@ -20,14 +21,14 @@ class PageDisplayController extends Controller
         return view('site.page', ['item' => $item]);
     }
 
-    public function home(): View
+    public function home(NewsArticleRepository $newsRepository): View
     {
         if (Homepage::get()->isNotEmpty()) {
             /** @var Homepage $item */
             $item = Homepage::published()->get()->first();
 
             if ($item) {
-                return view('site.homepage', ['item' => $item]);
+                return view('site.homepage', ['item' => $item, 'newsArticles' => $newsRepository->last3()]);
             }
         }
 

@@ -7,9 +7,23 @@ use Illuminate\Database\Eloquent\Collection;
 
 abstract class CardSerializeable extends Model
 {
-    public abstract function makeCard(): array;
+    public function getCardImageSrc(): string {
+        return '';
+    }
 
-    public static function makeCardArray(Collection $objects): array {
-        return $objects->map(fn($obj) => $obj->makeCard())->toArray();
+    public function getCardCategory(): string {
+        return '';
+    }
+
+    public function getCardHeading(): string {
+        return '';
+    }
+
+    public function getCardText(): string {
+        return '';
+    }
+
+    public function getCardUrl(): string {
+        return '';
     }
 }

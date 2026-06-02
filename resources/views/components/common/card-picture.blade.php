@@ -3,11 +3,11 @@
 <li class="rounded-xl border p-5">
     @if ($imgSrc && $url)
         <a href="{{$url}}">
-            <x-img class="h-auto rounded" :src="$imgSrc" />
+            <x-img class="h-auto w-full rounded aspect-video" :src="$imgSrc" />
         </a>
     @endif
     @if ($imgSrc && !$url)
-        <x-img class="h-auto rounded" :src="$imgSrc" />
+        <x-img class="h-auto w-full rounded aspect-video" :src="$imgSrc" />
     @endif
     <div class="space-y-5 pt-5 md:p-5">
         @if ($category)<x-badge>{{ $category }}</x-badge>@endif
