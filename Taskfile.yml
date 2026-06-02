@@ -20,6 +20,8 @@ tasks:
       - task: artisan
         vars: { CLI_ARGS: "key:generate" }
       - task: migrate
+      - task: artisan
+        vars: { CLI_ARGS: "twill:update" }
 
   deploy:
     desc: "Выполнить операции, нужные для сборки и развёртывания на рабочем окружении"
