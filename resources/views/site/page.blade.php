@@ -8,7 +8,7 @@
         @if ($item->description)
             <x-lead>{{ $item->description }}</x-lead>
         @endif
-        @if ($item->image('cover'))
+        @if ($item->hasImage('cover'))
             <x-img class="mb-16 max-h-80 rounded" src="{{ $item->image('cover') }}" alt="{{ $item->imageAltText('cover') }}" />
         @endif
     </section>

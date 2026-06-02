@@ -5,7 +5,7 @@
 
     <section class="mb-16">
         <x-h1>{{ $item->title }}</x-h1>
-        @if ($item->image('cover'))
+        @if ($item->hasImage('cover'))
             <x-img class="mb-16 max-h-80 rounded" src="{{ $item->image('cover') }}" alt="{{ $item->imageAltText('cover') }}" />
         @endif
     </section>

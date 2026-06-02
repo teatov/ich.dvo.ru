@@ -92,9 +92,18 @@ task stop
 task vite
 ```
 
-## Создание аккаунта администратора
+## Работа с CMS
+
+Создание аккаунта администратора
+
 ```
 task artisan -- twill:superadmin <email> <password>
+```
+
+Создание новой отдельной страницы
+
+```
+task artisan -- twill:make:singleton <name>
 ```
 
 ## Развёртывание на рабочем окружении 
