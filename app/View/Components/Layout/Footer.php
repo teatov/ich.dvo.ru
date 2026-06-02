@@ -16,14 +16,14 @@ class Footer extends Component
         $this->navLinks = [
             'О нас' => [
                 [
-                    'Об институте' => route('about'),
-                    'История' => route('history'),
-                    'Сотрудники' => route('staff'),
+                    'Об институте' => '/about',
+                    'История' => '/history',
+                    'Сотрудники' => '/staff',
                 ],
                 [
-                    'Новости' => route('news-articles.index'),
-                    'Мероприятия' => route('events'),
-                    'Достижения' => route('achievements'),
+                    'Новости' => '/news-articles.index',
+                    'Мероприятия' => '/events',
+                    'Достижения' => '/achievements',
                 ],
             ],
             'Организации' => [
@@ -34,9 +34,9 @@ class Footer extends Component
                     'Организация 4' => '/4',
                 ],
                 [
-                    'Диссертационный совет' => route('dissertations'),
-                    'Список патентов' => route('patents'),
-                    'Оборудование' => route('equipment'),
+                    'Диссертационный совет' => '/dissertations',
+                    'Список патентов' => '/patents',
+                    'Оборудование' => '/equipment',
                 ],
             ],
         ];

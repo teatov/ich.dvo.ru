@@ -14,8 +14,6 @@
 
         @if ($type === 'textarea')
             <x-textarea :id="$name" :name="$name" :value="$value" {{ $attributes }} />
-        @elseif ($type === 'tiptap-editor')
-            <x-tiptap-editor :name="$name" :content="$value" />
         @else
             <x-input :id="$name" :name="$name" :type="$type" :value="$value"
                 {{ $attributes }} />
