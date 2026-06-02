@@ -25,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
             NavigationLink::make()->forSingleton('homepage')->title('Главная')
         );
         TwillNavigation::addLink(
+            NavigationLink::make()->forSingleton('history')->title('История')
+        );
+        TwillNavigation::addLink(
             NavigationLink::make()->forModule('pages')->title('Страницы')
         );
         TwillNavigation::addLink(

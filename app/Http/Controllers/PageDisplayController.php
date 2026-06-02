@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Homepage;
+use App\Models\History;
 use App\Repositories\PageRepository;
 use Illuminate\Contracts\View\View;
 
@@ -22,11 +23,25 @@ class PageDisplayController extends Controller
     public function home(): View
     {
         if (Homepage::get()->isNotEmpty()) {
-            /** @var Homepage $homePage */
-            $homePage = Homepage::published()->get()->first();
+            /** @var Homepage $item */
+            $item = Homepage::published()->get()->first();
 
-            if ($homePage) {
-                return view('site.homepage', ['item' => $homePage]);
+            if ($item) {
+                return view('site.homepage', ['item' => $item]);
+            }
+        }
+
+        abort(404);
+    }
+
+    public function history(): View
+    {
+        if (History::get()->isNotEmpty()) {
+            /** @var History $item */
+            $item = History::published()->get()->first();
+
+            if ($item) {
+                return view('site.history', ['item' => $item]);
             }
         }
 
